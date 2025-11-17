@@ -3,42 +3,157 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Blog Desenrola Bruno – sua fonte de notícias e reviews do mundo PlayStation, Xbox e Nintendo. Fique por dentro das novidades do universo gamer com conteúdo atualizado e feito para apaixonados por jogos.">
-    <title>Desenrola Bruno</title>
+    <meta name="description" content="Blog Games – sua fonte de notícias e reviews do mundo PlayStation, Xbox e Nintendo. Fique por dentro das novidades do universo gamer com conteúdo atualizado e feito para apaixonados por jogos.">
+    <title>Games | Notícias e Análises</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    
+    <!--https://blog.br.playstation.com/-->
+    <!--https://news.xbox.com/pt-br/-->
+    <!--https://www.nintendo.com/pt-br/whatsnew/-->
+    <style>
+        /* 1. ESTILOS BASE: CENTRALIZAÇÃO GERAL */
+        body {
+            background-color: #0A0A0A;
+            color: #FFFFFF;
+            font-family: 'Roboto', sans-serif;
+            font-size: 1.5rem;
+            /* CORREÇÃO: CENTRALIZA TODO O TEXTO DO BODY POR PADRÃO */
+            text-align: center; 
+        }
+        
+        /* 2. CONFIGURAÇÃO DE TODOS OS TÍTULOS */
+        h1, h2, h3, h4, h5 {
+            font-family: 'Montserrat', sans-serif;
+            color: #FFFFFF;
+            margin-top: 0.5em; 
+            margin-bottom: 0.5em; 
+            /* Títulos já herdam a centralização do body */
+        }
+
+        h1 {
+            font-size: 4rem;
+            color: #00FFFF;
+            margin-top: 0;
+            padding-top: 40px; 
+        }
+        
+        .A {
+            font-family: 'Roboto', sans-serif;
+            color: #CCCCCC;
+            margin-top: -10px;
+            margin-bottom: 40px; 
+        }
+        
+        /* 3. AJUSTE DO MENU */
+        .galeria {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            background-color: #ffffff;
+            padding: 15px 0;
+            margin-bottom: 40px;
+        }
+        
+        .galeria img {
+            width: 3rem; 
+            height: auto;
+            display: block;
+        }
+
+        /* 4. CONTÊINER PRINCIPAL DAS NOTÍCIAS */
+        .noticia-container {
+            margin: 0 auto; 
+            /* ANULAÇÃO CRUCIAL: ALINHA O CONTEÚDO À ESQUERDA PARA TEXTOS LONGOS */
+            text-align: justify;
+        }
+        
+        /* 5. SEÇÕES DE NOTÍCIAS GERAIS (Xbox, Nintendo) */
+        section {
+            max-width: 800px;
+            margin: 40px auto; 
+            padding: 0 20px;
+            /* ANULAÇÃO CRUCIAL: ALINHA O CONTEÚDO À ESQUERDA PARA TEXTOS LONGOS */
+            text-align: center; 
+        }
+
+        /* 6. CORREÇÃO FINAL DO ESPAÇAMENTO IMAGEM/TEXTO */
+        .imagem-noticia {
+            display: block; 
+            max-width: 100%; 
+            height: auto;
+            margin-top: 20px;
+            margin-bottom: 10px; 
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .texto-descricao {
+            margin-top: 0; 
+            margin-bottom: 1.5rem;
+        }
+
+        /* 7. Estilo para os parágrafos em todas as seções */
+        section p {
+            line-height: 1.6;
+            margin-bottom: 1em; 
+        }
+        
+        .conteudo-principal iframe {
+            display: block;
+            margin: 20px 0;
+            max-width: 100%;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+    </style>
 </head>
 <body>
     <header>
-        <h1>Desenrola Bruno</h1>
-        <p>Blog gamer com notícias e análises do mundo PlayStation, Xbox e Nintendo.</p>
+        <h1>Visão Gamer</h1>
+        <p class="A">Notícias e Análises do Universo Gamer</p>
     </header>
+    
     <main>
-        <!--https://blog.br.playstation.com/-->
-        <!--Menú Playstation-->
+        <nav class="galeria">
+            <a href="Playstation/pagina.html"><img src="Imagens/Logo Playstation.png" alt="Logo Playstation"></a>
+            <a href="Xbox/pagina.html"><img src="Imagens/Logo Xbox.png" alt="Logo Xbox"></a>
+            <a href="Nintendo/pagina.html"><img src="Imagens/Logo Nintendo.png" alt="Logo Nintendo" class="nint"></a>
+        </nav>
         <section>
-            <h2>PlayStation</h2>
-                <h3>Notícias</h3>
-                    <h4>Catálogo de Jogos PlayStation Plus de agosto: Mortal Kombat 1, Marvel’s Spider-Man, Sword of the Sea, Earth Defense Force 6 e muito mais</h4>
-                    <p>Neste mês, libere finalizadores brutais no reimaginado Mortal Kombat 1, voe pelo horizonte de Nova York da Marvel como o icônico lançador de teias em Marvel’s Spider-Man, deslize por ruínas submersas meditativas em Sword of the Sea ou prepare-se para repelir forças alienígenas invasoras em Earth Defense Force 6. Todos esses títulos e muitos outros estão disponíveis na seleção do Catálogo de Jogos PlayStation Plus de agosto*. Isso inclui Sword of the Sea, que será lançado no Catálogo de Jogos no primeiro dia, o que significa que todos os títulos estarão disponíveis para jogar em 19 de agosto. Enquanto isso, Resident Evil 2 e Resident Evil 3 trazem o terror de sobrevivência retrô para o PlayStation Plus Deluxe.</p>
-                    <p>No mesmo dia, Death Stranding 2: On the Beach também estará disponível como avaliação de jogo para membros do PlayStation Plus Deluxe. Aproveite até 5 horas de jogo com esta avaliação por tempo limitado e, se decidir comprar o jogo completo, seu progresso e troféus serão transferidos.</p>
+            
+                <div class="cabecalho">
+                    <h3>Notícias</h3><br>
+                    <h4>Novidades do Catálogo de Jogos PlayStation Plus de novembro: Grand Theft Auto V, Pacific Drive, Still Wakes the Deep e muito mais</h4>
+                </div>
+            <div class="noticia-container">
+                <div class="conteudo-principal">
+                    <img src="Imagens/catalogo play.png" alt="Catalogo Playstation" class="imagem-noticia">
+                    <p class="texto-descricao">Neste mês, mergulhe no submundo do crime da cidade de Los Santos em Grand Theft Auto V, passeie pelo surreal e selvagem Noroeste Pacífico em Pacific Drive ou lute pela sua sobrevivência em uma plataforma de petróleo instável em Still Wakes the Deep. Todos esses títulos e muitos outros estão disponíveis na seleção de novembro do Catálogo de Jogos PlayStation Plus*. Enquanto isso, Tomb Raider: Anniversary traz a aventura original de Lara para o PlayStation Plus Deluxe. Todos esses títulos estarão disponíveis para jogar em 18 de novembro.</p>
+                    <!--<iframe width="560" height="315" src="https://www.youtube.com/embed/Ue1Yo-3QnRc?si=f0AvGNItqQQO7TS1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>-->
+                </div>
+            </div>
         </section>
-        <!--https://news.xbox.com/pt-br/-->
-        <!--Menú Xbox-->
+
         <section>
-            <h2>Xbox</h2>
-                <h3>Notícias</h3>
-                    <h4>Próxima semana em Xbox: novos jogos de 1 a 5 de setembro</h4>
-                    <p>Boas-vindas ao Próxima Semana em Xbox! Nesta seção semanal, apresentamos todos os jogos que em breve chegarão ao Xbox Series X|S, Xbox One, Xbox PC e Game Pass! Confira mais detalhes sobre esses jogos abaixo e clique nos perfis para mais informações (datas de lançamento sujeitas a alteração). Vamos começar!</p>
-                        <h5>Hollow Knight: Silksong</h5>
-                        <p>4 de setembro – Game Pass e Xbox Play Anywhere</p>
-                        <p>Como a caçadora letal Hornet, aventure-se por um reino governado por seda e canção! Capturada e levada para esse mundo desconhecido, prepare-se para enfrentar inimigos poderosos e resolver mistérios antigos enquanto avança em uma perigosa peregrinação até o topo do reino. Hollow Knight: Silksong é a sequência épica de Hollow Knight, o premiado jogo de ação e aventura. Explore novas terras, descubra novos poderes, enfrente hordas de insetos e feras e desvende segredos ligados à sua origem e ao seu passado.</p>
+                <img src="Imagens/cod 7.png" alt="cod 7" class="imagem-noticia">
+                <h4>Call of Duty: Black Ops 7 – o que você precisa saber sobre a campanha cooperativa, endgame e mais</h4>
+                <div class="noticia-container">
+                <ul>
+                    <li>Saiba mais sobre os eventos que antecedem a campanha cooperativa de Call of Duty: Black Ops 7.</li>
+                    <li>Descubra mais detalhes sobre o Endgame, que encarrega a JSOC de explorar Avalon, eliminar as fortalezas da Guild e monitorar zonas de exposição que estão liberando uma toxina misteriosa na cidade.</li>
+                    <li>Call of Duty: Black Ops 7 será lançado em 14 de novembro de 2025 para Xbox Series X|S, Xbox One, Xbox no PC, ROG Xbox Ally portátil, Cloud, Battle.net, Steam, PlayStation 5 e PlayStation 4. É um título Xbox Play Anywhere e estará disponível no primeiro dia com Game Pass Ultimate e PC Game Pass.</li>
+                </ul>
+            </div>
         </section>
-        <!--https://www.nintendo.com/pt-br/-->
-        <!--Menú Nintendo-->
+        
         <section>
-            <h2>Nintendo</h2>
-                <h3>Notícias</h3>
-                    <h4>Chibi-Robo chegou! Nova atualização para os assinantes do Nintendo Switch Online + Pacote adicional</h4>
-                    <p>Você é fã de jogos retrô? Assinantes do Nintendo Switch Online + Pacote adicional têm acesso a uma variedade incrível de paparicos clássicos. Esse plano de assinatura permite que você aproveite coletâneas de jogos selecionados que foram originalmente lançados nos seguintes consoles: Nintendo GameCube™ (exclusivamente para o console Nintendo Switch™ 2), Nintendo 64™, Game Boy™ Advance, Game Boy, Super NES™, NES™, SEGA Mega Drive™. O jogo Chibi-Robo!™ acabou de ser adicionado, então vamos ver qual é a dele.</p>
+            <img src="Imagens/ilusion.png" alt="ilusion" class="imagem-noticia">
+            <h4>Experimente o teste de jogo mais recente: Disney Illusion Island</h4>
+                <div class="noticia-container">
+                    <p>Jogue como Mickey e amigos! Do dia 29 de outubro, às 14h, até o dia 5 de novembro, às 4h59 (horário de Brasília), os assinantes do Nintendo Switch Online* podem baixar e experimentar o jogo completo Disney Illusion Island sem custo adicional.</p>
+                </div>
         </section>
     </main>
     <footer>
