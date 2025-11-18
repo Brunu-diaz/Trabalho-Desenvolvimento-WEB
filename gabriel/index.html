@@ -12,7 +12,7 @@
       body,
       html {
          margin: 0;
-         background: linear-gradient(180deg, #060607 0%, #0d0d0f 100%);
+         background: linear-gradient(180deg, #f5efe6 0%, #f0e8dc 100%);
          min-height: 100vh;
       }
 
@@ -28,7 +28,7 @@
          width: 42px;
          height: 42px;
          border-radius: 8px;
-         background: #e31b23;
+         background: #1C435A;
          display: flex;
          align-items: center;
          justify-content: center;
@@ -36,21 +36,21 @@
          font-weight: 700;
          font-size: 18px;
          color: white;
-         box-shadow: 0 4px 16px rgba(227, 27, 35, 0.3);
+         box-shadow: 0 4px 16px rgba(28, 67, 90, 0.25);
       }
 
       .nav-titulo {
          font-family: Poppins;
          font-size: 18px;
          font-weight: 700;
-         color: white;
+         color: #3b3b3b;
          margin: 0;
       }
 
       .nav-subtitulo {
          font-family: Poppins;
          font-size: 12px;
-         color: #6b6b6b;
+         color: #7a7a7a;
          margin-top: -2px;
       }
       .nav-style ul {
@@ -58,7 +58,7 @@
          display: flex;
          padding: 0;
          margin: 0;
-         color: #ddd
+         color: #3b3b3b;
       }
 
       .nav-style input {
@@ -66,21 +66,22 @@
          right: 5%;
          padding: 8px 14px;
          border-radius: 6px;
-         border: color(#ffffff);
+         border: 1px solid #d8d1c9;
          outline: none;
-         background: linear-gradient(180deg, rgba(10, 10, 10), rgba(10, 10, 10, 0.85));
-         color: #ddd
+         background: #faf6f0;
+         color: #3b3b3b;
       }
 
       .nav-style li {
          margin: 20px;
          font-family: Poppins;
          padding: 8px 10px;
-         font-weight: 500
+         font-weight: 500;
+         color: #3b3b3b;
       }
 
       .nav-style li:hover {
-         background-color: rgba(255, 255, 255, 0.15);
+         background-color: rgba(0, 0, 0, 0.08);
          border-radius: 5px;
          padding: 8px 10px;
 
@@ -111,14 +112,14 @@
          position: sticky;
          top: 0;
          z-index: 1;
-         background: linear-gradient(180deg, rgba(10, 10, 10), rgba(10, 10, 10, 0.85));
+         background: #f1e9df;
       }
 
       .card-noticia {
          width: 65%;
-         border: 2px solid #000;
+         border: 2px solid #d6ccc2;
          border-radius: 10px;
-         background: linear-gradient(180deg, rgba(10, 10, 10), rgba(10, 10, 10, 0.90));
+         background: #faf6f0;
          padding: 10px;
       }
 
@@ -126,7 +127,7 @@
       .imagem-card {
          width: 100%;
          height: 50vh;
-         border: 2px solid #000;
+         border: 2px solid #d6ccc2;
          background-image: url("https://admin.cnnbrasil.com.br/wp-content/uploads/sites/12/2025/11/gol-estevao-brasil-senegal-e1763225252113.jpg?w=1320&h=742&crop=0");
          background-size: cover;
          background-position: center;
@@ -136,16 +137,16 @@
 
       .texto-card {
          border-radius: 8px;
-         color: white;
+         color: #333;
          font-family: Poppins;
       }
 
       .texto-card a {
-         background: rgba(255, 255, 255, 0.07);
+         background: rgba(0, 0, 0, 0.06);
          display: inline-block;
          margin-top: 15px;
-         color: white;
-         border: 2px solid rgb(54, 54, 54);
+         color: #333;
+         border: 2px solid #b9b1a8;
          padding: 4px 10px;
          border-radius: 6px;
          text-decoration: none;
@@ -153,16 +154,15 @@
       }
 
       .texto-card a:hover {
-         background: rgba(255, 255, 255, 0.02);
-         ;
+         background: rgba(0, 0, 0, 0.03);
          transform: translateY(-2px);
       }
 
       .tabela {
          display: flex;
          flex-direction: column;
-         background: linear-gradient(180deg, rgba(17, 17, 17, 0.8), rgba(14, 14, 14, 0.85));
-         border: 1px solid black;
+         background: #faf6f0;
+         border: 1px solid #d6ccc2;
          border-radius: 12px;
          width: 30%;
          height: 100%;
@@ -170,8 +170,8 @@
       }
 
       .resultado {
-         background: linear-gradient(180deg, rgba(255, 255, 255, 0.01), rgba(255, 255, 255, 0.02));
-         border: 1px solid black;
+         background: #f2ebe3;
+         border: 1px solid #d6ccc2;
          border-radius: 12px;
          margin: 10px 20px 20px;
          padding: 14px;
@@ -186,22 +186,22 @@
 
       .times {
          font-weight: 800;
-         color: #ddd;
+         color: #333;
          margin: 0 4px;
       }
 
       .gols {
          font-size: 26px;
          font-weight: 600;
-         color: red;
+         color:#1C435A;
       }
 
       .lista li {
          list-style: none;
          padding: 30px 6px;
-         border-bottom: 1px dashed rgba(255, 255, 255, 0.03);
+         border-bottom: 1px dashed #d8d1c9;
          font-size: 18px;
-         color: #ddd;
+         color: #333;
       }
 
       .tabela-campeonato {
@@ -211,14 +211,14 @@
          border-collapse: collapse;
          margin-bottom: 20px;
          font-size: 14px;
-         background: #0e0f10;
-         border-radius: 20px;
-         box-shadow: 0 0 20px rgba(255, 0, 0, 0.15);
+         background: #f1e9df;
+         border-radius: 10px;
+         box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
          font-family: Poppins;
       }
 
       .tabela-campeonato td {
-         color: #ddd;
+         color: #333;
       }
 
       .card {
@@ -230,10 +230,10 @@
       }
 
       .card-metade {
-         box-shadow: 0 0 20px rgba(255, 0, 0, 0.15);
+         box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
          flex: 1;
          height: 320px;
-         background: #000;
+         background:  #faf6f0;
          border-radius: 12px;
          overflow: hidden;
          display: flex;
@@ -255,7 +255,7 @@
       .conteudo-card {
          font-family: Poppins;
          height: 20%;
-         background: rgba(255, 255, 255, 0.06);
+         background:#efe7dd;
          padding: 30px;
       }
 
@@ -282,11 +282,11 @@
       }
 
       .lutadores-destaque {
-         background: #000;
+         background:  #faf6f0;
          padding: 20px;
          border-radius: 12px;
-         border: 1px solid #333;
-         box-shadow: 0 0 12px rgba(255, 0, 0, 0.1);
+         border: 1px solid#d6ccc2;
+         box-shadow:  0 0 12px rgba(0, 0, 0, 0.1);
          width: 100%;
          max-width: 550px;
       }
@@ -296,7 +296,7 @@
          align-items: center;
          gap: 15px;
          padding: 16px;
-         background: rgba(255, 255, 255, 0.03);
+         background: #f2ebe3;
          border-radius: 14px;
          margin-bottom: 12px;
          cursor: pointer;
@@ -319,20 +319,20 @@
       .lutador .info h3 {
          margin: 0;
          font-family: Poppins, sans-serif;
-         color: #eee;
+         color: #333;
          font-size: 19px;
       }
 
       .lutador .info p {
          margin: 3px 0 0;
-         color: #6b6b6b;
+         color:#7a7a7a;
          font-size: 14px;
          font-family: Poppins, sans-serif;
       }
 
       .caixa {
-         background: linear-gradient(180deg, rgba(17, 17, 17, 0.8), rgba(14, 14, 14, 0.85));
-         border: 1px solid black;
+         background: #f2ebe3;
+         border: 1px solid #d6ccc2;
          border-radius: 12px;
          padding: 20px;
       }
@@ -484,7 +484,7 @@
             </div>
 
             <div class="resultado" style="flex: 1; padding-top: 10px; ">
-               <h4 style="margin: 0 0 8px; font-size: 16px; font-family: Poppins; color: #ddd;">Proximos Jogos</h4>
+               <h4 style="margin: 0 0 8px; font-size: 16px; font-family: Poppins; color: #333;">Proximos Jogos</h4>
                <ul class="lista" style="margin: 0; padding: 0;">
                   <li><strong>Ter, 16:30 </strong>Brasil x Tunisia</li>
                   <li><strong>Ter, 16:40 </strong>Espanha x Turquia</li>
@@ -497,7 +497,7 @@
 
       <table class="tabela-campeonato">
          <thead>
-            <tr style="background: red; color: #ddd; text-transform: uppercase; font-size: 13px;">
+            <tr style="background:#1C435A; color: #fff; text-transform: uppercase; font-size: 13px;">
                <th style="padding: 10px;">Pos</th>
                <th>Time</th>
                <th>Pontos</th>
@@ -534,7 +534,7 @@
    </section>
 
    <section class="secao-1" id="basquete">
-      <h2 style="color: #ddd;">Basquete - Estatísticas da Rodada</h2>
+      <h2 style="color: #333;">Basquete - Estatísticas da Rodada</h2>
 
       <div class="card">
 
@@ -544,7 +544,7 @@
             </div>
 
             <div class="conteudo-card">
-               <h3 style="font-size: 20px; color: #ddd;">Lakers tem primeiro tempo de gala e domina os Bucks</h3>
+               <h3 style="font-size: 20px; color: #333;">Lakers tem primeiro tempo de gala e domina os Bucks</h3>
                <p style="font-size: 12px; color: #6b6b6b;">Os Lakers chegaram à 10 vitória em 14 jogos na temporada
                   2025-26 da NBA</p>
             </div>
@@ -556,7 +556,7 @@
             </div>
 
             <div class="conteudo-card" style="color: #ddd;">
-               <h3 style="font-size: 20px; color: #ddd;">Stephen Curry encerra parceria com marca esportiva</h3>
+               <h3 style="font-size: 20px; color: #333;">Stephen Curry encerra parceria com marca esportiva</h3>
                <p style="font-size: 12px; color: #6b6b6b;">Curry assume controle total da Curry Brand e tem liberdade
                   para usar outras marcas</p>
             </div>
@@ -566,10 +566,10 @@
       <div class="tabela-nba">
          <div class="tabela-box">
 
-            <h2 style="color: #ddd;">Conferência Leste</h2>
+            <h2 style="color: #333;">Conferência Leste</h2>
             <table class="tabela-campeonato">
                <thead>
-                  <tr style="background: red; color: #ddd; text-transform: uppercase; font-size: 13px;">
+                  <tr style="background:#1C435A; color: #fff; text-transform: uppercase; font-size: 13px;">
                      <th style="padding: 10px;">Time</th>
                      <th>Vitórias</th>
                      <th>Derrotas</th>
@@ -608,10 +608,10 @@
          <div class="tabela-box">
 
 
-            <h2 style="color: #ddd;">Conferência Oeste</h2>
+            <h2 style="color: #333;">Conferência Oeste</h2>
             <table class="tabela-campeonato">
                <thead>
-                  <tr style="background: red; color: #ddd; text-transform: uppercase; font-size: 13px;">
+                  <tr style="background:#1C435A; color: #fff; text-transform: uppercase; font-size: 13px;">
                      <th style="padding: 10px;">Time</th>
                      <th>Vitórias</th>
                      <th>Derrotas</th>
@@ -652,7 +652,7 @@
    </section>
 
    <section class="secao-1" id="mma">
-      <h2 style="color: #ddd;">MMA - Estatísticas da Rodada</h2>
+      <h2 style="color: #333;">MMA - Estatísticas da Rodada</h2>
 
       <div class="card">
 
@@ -662,7 +662,7 @@
             </div>
 
             <div class="conteudo-card">
-               <h3 style="font-size: 20px; color: #ddd;">Carlos Prates nocauteia ex-campeão</h3>
+               <h3 style="font-size: 20px; color: #333;">Carlos Prates nocauteia ex-campeão</h3>
                <p style="font-size: 12px; color: #6b6b6b;">Brasileiro derrotou Leon Edwards e pediu chance pelo título
                   dos pesos-medios </p>
             </div>
@@ -673,8 +673,8 @@
                style="background-image: url('https://images.wallpaperscraft.com/image/single/mixed_martial_arts_mma_wrestling_124946_3840x2400.jpg');">
             </div>
 
-            <div class="conteudo-card" style="color: #ddd;">
-               <h3 style="font-size: 20px; color: #ddd;">Kaczmarczyk finaliza e leva cinturão interino dos penas</h3>
+            <div class="conteudo-card" style="color: #333;">
+               <h3 style="font-size: 20px; color: #333;">Kaczmarczyk finaliza e leva cinturão interino dos penas</h3>
                <p style="font-size: 12px; color: #6b6b6b;">Polonês bate compatriota Adam Soldaev e poderá desafiar
                   campeão </p>
             </div>
@@ -685,7 +685,7 @@
 
          <div class="tabela">
             <div class="resultado" style="flex: 1; display: flex; flex-direction: column; padding-top: 10px; ">
-               <h4 style="margin: 0 0 8px; font-size: 16px; font-family: Poppins; color: #ddd;">Proximas Lutas</h4>
+               <h4 style="margin: 0 0 8px; font-size: 16px; font-family: Poppins; color: #333;">Proximas Lutas</h4>
                <ul class="lista" style="margin: 0; padding: 0;">
                   <li><strong>22 Nov, 15:00 </strong>Arman Tsarukyan x Dan Hooker</li>
                   <li><strong>22 Nov, 16:00 </strong>Volkan Oezdemir x Alonzo Menifield</li>
@@ -728,10 +728,10 @@
             </div>
          </div>
          <div class="caixa">
-            <h4 style="color: #ddd; font-family: Poppins;">Inscreva-se</h4>
+            <h4 style="color: #333; font-family: Poppins;">Inscreva-se</h4>
             <p style="font-family: Poppins; color:  #6b6b6b;">Receba um resumo diário com os principais destaques</p>
             <label><input type="email" placeholder="seu@exemplo.com"
-                  style="flex: 1; padding: 5px; border-radius: 8px; border: 1px solid rgba(255,255,255,0.04); background: transparent; color: #fff;"></label>
+                  style="flex: 1; padding: 5px; border-radius: 8px; border: 1px solid rgba(0, 0, 0,0.1); background: transparent; color: #333;"></label>
             <button
                style="background: red; border: none; padding: 10px; border-radius: 8px; color: #fff; font-weight: 700;">Inscrever</button>
          </div>
