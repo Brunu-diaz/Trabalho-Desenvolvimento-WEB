@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Blog Games – sua fonte de notícias e reviews do mundo PlayStation, Xbox e Nintendo. Fique por dentro das novidades do universo gamer com conteúdo atualizado e feito para apaixonados por jogos.">
-    <title>Games | Notícias e Análises</title>
+    <title>Visão Gamer | Notícias e Análises</title>
     
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     
@@ -12,23 +12,19 @@
     <!--https://news.xbox.com/pt-br/-->
     <!--https://www.nintendo.com/pt-br/whatsnew/-->
     <style>
-        /* 1. ESTILOS BASE: CENTRALIZAÇÃO GERAL */
         body {
-            background-color: #0A0A0A;
-            color: #FFFFFF;
+            background-color: linear-gradient(180deg, #f5efe6 0%, #f0e8dc 100%);
+            color: #333;
             font-family: 'Roboto', sans-serif;
             font-size: 1.5rem;
-            /* CORREÇÃO: CENTRALIZA TODO O TEXTO DO BODY POR PADRÃO */
             text-align: center; 
         }
         
-        /* 2. CONFIGURAÇÃO DE TODOS OS TÍTULOS */
         h1, h2, h3, h4, h5 {
             font-family: 'Montserrat', sans-serif;
-            color: #FFFFFF;
+            color: #333;
             margin-top: 0.5em; 
             margin-bottom: 0.5em; 
-            /* Títulos já herdam a centralização do body */
         }
 
         h1 {
@@ -39,45 +35,41 @@
         }
         
         .A {
+            background-color: #333;
             font-family: 'Roboto', sans-serif;
-            color: #CCCCCC;
+            color: #00FFFF;
             margin-top: -10px;
-            margin-bottom: 40px; 
+            margin-bottom: 40px;
+            padding-bottom: 30px;
+            padding-top: 5px;
         }
         
-        /* 3. AJUSTE DO MENU */
         .galeria {
             display: flex;
             justify-content: center;
             gap: 2rem;
-            background-color: #ffffff;
             padding: 15px 0;
             margin-bottom: 40px;
         }
         
         .galeria img {
-            width: 3rem; 
+            width: 4rem; 
             height: auto;
             display: block;
         }
 
-        /* 4. CONTÊINER PRINCIPAL DAS NOTÍCIAS */
         .noticia-container {
             margin: 0 auto; 
-            /* ANULAÇÃO CRUCIAL: ALINHA O CONTEÚDO À ESQUERDA PARA TEXTOS LONGOS */
             text-align: justify;
         }
         
-        /* 5. SEÇÕES DE NOTÍCIAS GERAIS (Xbox, Nintendo) */
         section {
             max-width: 800px;
             margin: 40px auto; 
             padding: 0 20px;
-            /* ANULAÇÃO CRUCIAL: ALINHA O CONTEÚDO À ESQUERDA PARA TEXTOS LONGOS */
             text-align: center; 
         }
-
-        /* 6. CORREÇÃO FINAL DO ESPAÇAMENTO IMAGEM/TEXTO */
+        
         .imagem-noticia {
             display: block; 
             max-width: 100%; 
@@ -93,7 +85,6 @@
             margin-bottom: 1.5rem;
         }
 
-        /* 7. Estilo para os parágrafos em todas as seções */
         section p {
             line-height: 1.6;
             margin-bottom: 1em; 
@@ -111,25 +102,26 @@
 </head>
 <body>
     <header>
-        <h1>Visão Gamer</h1>
-        <p class="A">Notícias e Análises do Universo Gamer</p>
+        <div class="A"><h1>Visão Gamer</h1>
+        <p>Notícias e Análises do Universo Gamer</p>
+        </div>
+        <nav class="galeria">
+            <a href="Playstation/pagina.html"><img src="Imagens/Logo Playstation.png" alt="Logo Playstation"></a>
+            <a href="Xbox/pagina.html" style="background-color: #107C10; border-radius: 10px;"><img src="Imagens/Logo Xbox.png" alt="Logo Xbox"></a>
+            <a href="Nintendo/pagina.html" style="width: ;"><img src="Imagens/Logo Nintendo.png" alt="Logo Nintendo" class="nint"></a>
+        </nav>
     </header>
     
     <main>
-        <nav class="galeria">
-            <a href="Playstation/pagina.html"><img src="Imagens/Logo Playstation.png" alt="Logo Playstation"></a>
-            <a href="Xbox/pagina.html"><img src="Imagens/Logo Xbox.png" alt="Logo Xbox"></a>
-            <a href="Nintendo/pagina.html"><img src="Imagens/Logo Nintendo.png" alt="Logo Nintendo" class="nint"></a>
-        </nav>
         <section>
-            
                 <div class="cabecalho">
                     <h3>Notícias</h3><br>
-                    <h4>Novidades do Catálogo de Jogos PlayStation Plus de novembro: Grand Theft Auto V, Pacific Drive, Still Wakes the Deep e muito mais</h4>
+                    <a href="Playstation/pagina.html"><h4>Novidades do Catálogo de Jogos PlayStation Plus de novembro: Grand Theft Auto V, Pacific Drive, Still Wakes the Deep e muito mais</h4>
+                    </a>
                 </div>
             <div class="noticia-container">
                 <div class="conteudo-principal">
-                    <img src="Imagens/catalogo play.png" alt="Catalogo Playstation" class="imagem-noticia">
+                    <a href="Playstation/pagina.html"><img src="Imagens/catalogo play.png" alt="Catalogo Playstation" class="imagem-noticia"></a>
                     <p class="texto-descricao">Neste mês, mergulhe no submundo do crime da cidade de Los Santos em Grand Theft Auto V, passeie pelo surreal e selvagem Noroeste Pacífico em Pacific Drive ou lute pela sua sobrevivência em uma plataforma de petróleo instável em Still Wakes the Deep. Todos esses títulos e muitos outros estão disponíveis na seleção de novembro do Catálogo de Jogos PlayStation Plus*. Enquanto isso, Tomb Raider: Anniversary traz a aventura original de Lara para o PlayStation Plus Deluxe. Todos esses títulos estarão disponíveis para jogar em 18 de novembro.</p>
                     <!--<iframe width="560" height="315" src="https://www.youtube.com/embed/Ue1Yo-3QnRc?si=f0AvGNItqQQO7TS1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>-->
                 </div>
