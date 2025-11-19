@@ -1,17 +1,49 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <title>Playstation</title>
     <style>
+        header {
+            position: sticky; 
+            top: 0; 
+            z-index: 100; 
+            background-color: #f0f0f0;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .galeria {
+            display: flex;
+            justify-content: left;
+            gap: 7rem;
+            padding: 15px 0;
+            margin-bottom: 1.5rem;
+            margin-left: 30px;
+        }
+
         body {
-            background-color: linear-gradient(180deg, #f5efe6 0%, #f0e8dc 100%);
             color: #333;
             font-family: 'Roboto', sans-serif;
-            font-size: 1.5rem;
+            font-size: 1.1rem;
             /* CORREÇÃO: CENTRALIZA TODO O TEXTO DO BODY POR PADRÃO */
             text-align: center;
+            background-image: linear-gradient(rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.8)), url(../Imagens/Cópia\ de\ Design\ sem\ nome\ \(1\).png);
+            background-size: 60rem;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-position: center center;
+            margin: 0;
+        }
+
+        h1, h2, h3, h4, h5 {
+            font-family: 'Montserrat', sans-serif;
+            color: #333;
+            margin-top: 0.5em; 
+            margin-bottom: 0.5em; 
+            font-size: 1.5rem;
         }
         
         .imagem-noticia {
@@ -41,29 +73,115 @@
             text-align: justify; 
         }
 
-        .hr {
-            width: 5000;
+        #backToTopBtn {
+            position: fixed; 
+            bottom: 30px; 
+            right: 30px;  
+            background-color: black;
+            color: white; 
+            border: none;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-decoration: none; 
+            font-size: 1.5rem;
+            cursor: pointer;
+            transition: background-color 0.3s, transform 0.3s;
+            z-index: 1000; 
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        #backToTopBtn:hover {
+            background-color: #333;
+            transform: translateY(-3px);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+        }
+
+        #backToTopBtn i {
+            line-height: 2;
+        }
+
+        .titulo {
+            margin-left: 26.1rem;
+            margin-right: auto;
+            margin-top: auto;
+            margin-bottom: auto;
+            font-size: 3rem;
+            font-weight: bolder;
+            text-decoration: none;
+        }
+
+        footer {
+            background-color: #f0f0f0; 
+            color: #333; 
+            padding: 30px; 
+            text-align: center;
+            margin-top: 50px;
+            font-size: 0.8rem;
         }
     </style>
 </head>
 <body>
     <header>
-        <section>
             <nav class="galeria">
-                <a href="../index.html"><img src="../Imagens/Logo Playstation.png" alt="Logo Playstation"></a>
+                <a href="../index.html"><img src="../Imagens/Logo Playstation Preta.png" alt="Logo Playstation"></a>
+                <p class="titulo"><a href="../index.html">Playstation</a></p>
             </nav>
-        </section>
-        <hr><br>
     </header>
     <main>
+        <a id="backToTopBtn" href="javascript:void(0);" onclick="scrollToTop()"><i class="fas fa-gamepad"></i></a>
+            <script>
+            // Função para rolar a página para o topo suavemente
+            function scrollToTop() {
+            window.scrollTo({
+                top: 0, 
+                behavior: 'smooth' /* Faz a rolagem ser suave */
+            });
+            }
+            // Opcional: Mostrar/Esconder o botão apenas quando o usuário rolar
+            const backToTopBtn = document.getElementById("backToTopBtn");
+            window.onscroll = function() {
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                backToTopBtn.style.display = "block";
+            } else {
+                backToTopBtn.style.display = "none";
+            }
+            };
+            // Esconde o botão por padrão (melhore adicionando 'display: none;' ao CSS)
+            backToTopBtn.style.display = "none"; 
+            </script>
         <section>
-                <img src="../Imagens/catalogo play.png" alt="Catalogo Playstation" class="imagem-noticia"><br>
+                <img src="../Imagens/Img Play/catalogo play.png" alt="Pacific" class="imagem-noticia">
                 <h4 style="text-align:center">Novidades do Catálogo de Jogos PlayStation Plus de novembro: Grand Theft Auto V, Pacific Drive, Still Wakes the Deep e muito mais</h4>
-                <p class="texto-descricao">Neste mês, mergulhe no submundo do crime da cidade de Los Santos em Grand Theft Auto V, passeie pelo surreal e selvagem Noroeste Pacífico em Pacific Drive ou lute pela sua sobrevivência em uma plataforma de petróleo instável em Still Wakes the Deep. Todos esses títulos e muitos outros estão disponíveis na seleção de novembro do Catálogo de Jogos PlayStation Plus*. Enquanto isso, Tomb Raider: Anniversary traz a aventura original de Lara para o PlayStation Plus Deluxe. Todos esses títulos estarão disponíveis para jogar em 18 de novembro.</p>
-                <img src="../Imagens/reddead red.png" alt="red" class="imagem-noticia">
-                <p style="text-align:center;font-size:1rem;font-weight:bolder;">Red Dead Redemption | PS5, PS4</p>
-                 Quando agentes federais ameaçam sua família, o ex fora da lei John Marston é forçado a caçar a gangue de criminosos que um dia já foram seus amigos. Vivencie a jornada de Marston pelo vasto Oeste Americano e pelo México conforme ele luta para enterrar seu passado coberto de sangue, no aclamado título que antecede o sucesso de 2018, Red Dead Redemption 2.</p>
+                <p class="texto-descricao">Neste mês, mergulhe no submundo do crime da cidade de Los Santos em Grand Theft Auto V, passeie pelo surreal e selvagem Noroeste Pacífico em Pacific Drive ou lute pela sua sobrevivência em uma plataforma de petróleo instável em Still Wakes the Deep. Todos esses títulos e muitos outros estão disponíveis na seleção de novembro do Catálogo de Jogos PlayStation Plus. Enquanto isso, Tomb Raider: Anniversary traz a aventura original de Lara para o PlayStation Plus Deluxe. Todos esses títulos estarão disponíveis para jogar em 18 de novembro.</p>
+
+                <img src="../Imagens/Img Play/reddead red.png" alt="red" class="imagem-noticia">
+                <a href="https://www.playstation.com/pt-br/games/red-dead-redemption/"target="_blank" style="color: black;"><p style="text-align:center;font-size:1rem;font-weight:bolder;">Red Dead Redemption | PS5, PS4</p>
+                </a>
+                 <p>Quando agentes federais ameaçam sua família, o ex fora da lei John Marston é forçado a caçar a gangue de criminosos que um dia já foram seus amigos. Vivencie a jornada de Marston pelo vasto Oeste Americano e pelo México conforme ele luta para enterrar seu passado coberto de sangue, no aclamado título que antecede o sucesso de 2018, <a href="https://www.playstation.com/pt-br/games/red-dead-redemption-2/"target="_blank" style="color: black;">Red Dead Redemption 2</a>.</p>
+
+                 <img src="../Imagens/Img Play/gta.png" alt="GTAV" class="imagem-noticia">
+                 <a href="https://www.playstation.com/pt-br/games/grand-theft-auto-v/"target="_blank" style="color: black;"><p style="text-align:center;font-size:1rem;font-weight:bolder;">Grand Theft Auto V | PS5, PS4</p>
+                 </a>
+                 <p>Quando um jovem malandro de rua, um assaltante de banco aposentado e um psicopata aterrorizante se veem envolvidos com algumas das pessoas mais assustadoras e insanas do submundo do crime, do governo dos EUA e da indústria do entretenimento, eles precisam realizar uma série de roubos perigosos para sobreviver em uma cidade implacável, onde eles não podem confiar em ninguém (nem mesmo uns nos outros). Vivencie as histórias entrelaçadas de Franklin, Michael e Trevor no vasto mundo aberto de Los Santos e Blaine County.</p>
+
+                 <img src="../Imagens/Img Play/Pacific.png" alt="Pacific" class="imagem-noticia">
+                 <a href="https://www.playstation.com/pt-br/games/pacific-drive/"target="_blank" style="color: black;"><p style="text-align:center;font-size:1rem;font-weight:bolder;">Pacific Drive | PS5</p>
+                 </a>
+                 <p>Pacific Drive é um jogo que combina direção e sobrevivência em primeira pessoa. O carro é a sua única companhia em um passeio por uma releitura surreal e repleta de anomalias do Noroeste Pacífico. Com uma estrutura do tipo “road-lite”, cada excursão pela natureza selvagem traz desafios únicos e estranhos ao mesmo tempo em que você vai restaurando e aprimorando seu carro em uma garagem abandonada, que funciona como sua base. Com o carro como seu melhor amigo, você desvendará um mistério esquecido no caminho para o centro da Olympic Exclusion Zone.</p>
+
+                 <img src="../Imagens/Img Play/fieldset.png" alt="Fieldset" class="imagem-noticia">
+                 <a href="https://www.playstation.com/pt-br/games/still-wakes-the-deep/"target="_blank" style="color: black;"><p style="text-align:center;font-size:1rem;font-weight:bolder;">Still Wakes the Deep | PS5</p>
+                 </a>
+                 <p>Still Wakes the Deep é um retorno ao gênero de terror em primeira pessoa do The Chinese Room, estúdio que criou Amnesia: A Machine for Pigs, Everybody’s Gone to the Rapture e Dear Esther. Você está preso em uma plataforma de petróleo com todas as linhas de comunicação indisponíveis. Tudo o que resta é enfrentar o terror inimaginável que entrou a bordo. Procure por sua tripulação e ajude-a a sobreviver, se for capaz. Corra, escale e nade por corredores inundados e conveses externos sob a fúria da tempestade. Enfrente um inimigo implacável e aterrorizante. E reze para que, um dia, você consiga se encontrar com sua família novamente.</p>
         </section>
     </main>
+    <footer>
+        <p>© Copyright 2000-2025 Revista Conecta Comunicação e Participações S.A</p>
+        <p>CNPJ: 03.193.191/0005-77</p>
+    </footer>
 </body>
 </html>

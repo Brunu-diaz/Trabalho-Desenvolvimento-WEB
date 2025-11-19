@@ -1,29 +1,171 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <title>Nintendo</title>
-    <style>
+        <style>
+        header {
+            position: sticky; 
+            top: 0; 
+            z-index: 100; 
+            background-color: #f0f0f0;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
+        }
+
         body {
-            background-color: linear-gradient(180deg, #f5efe6 0%, #f0e8dc 100%);
             color: #333;
             font-family: 'Roboto', sans-serif;
-            font-size: 1.5rem;
-            /* CORREÇÃO: CENTRALIZA TODO O TEXTO DO BODY POR PADRÃO */
-            text-align: center; 
+            font-size: 1.1rem;
+            text-align: center;
+            background-image: linear-gradient(rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.8)), url(../Imagens/Logo\ Nintendo.png);
+            background-size: 40rem;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-position: center center;
+            margin: 0;
         }
+
+        .galeria {
+            display: flex;
+            justify-content: left;
+            gap: 7rem;
+            padding: 15px 0;
+            margin-bottom: 1.5rem;
+            margin-left: 30px;
+        }
+
+        h1, h2, h3, h4, h5 {
+            font-family: 'Montserrat', sans-serif;
+            color: #333;
+            margin-top: 0.5em; 
+            margin-bottom: 0.5em; 
+            font-size: 1.5rem;
+        }
+        
+        .imagem-noticia {
+            width: 500px;
+            border-radius: 0px;
+        }
+
         img {
             background-color: bl;
-            width: 7rem;
+            width: 5rem;
             display: block;
             margin-left: auto;
             margin-right: auto;
             border-radius: 10px;
         }
+
+        section p {
+            line-height: 1.6;
+            margin-bottom: 1em;
+            text-indent: 3rem;
+        }
+
+        section {
+            max-width: 800px;
+            margin: 40px auto; 
+            padding: 0 20px;
+            text-align: justify; 
+        }
+
+        #backToTopBtn {
+            position: fixed; 
+            bottom: 30px; 
+            right: 30px;  
+            background-color: black;
+            color: white; 
+            border: none;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-decoration: none; 
+            font-size: 1.5rem;
+            cursor: pointer;
+            transition: background-color 0.3s, transform 0.3s;
+            z-index: 1000; 
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        #backToTopBtn:hover {
+            background-color: #333;
+            transform: translateY(-3px);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+        }
+
+        #backToTopBtn i {
+            line-height: 2;
+        }
+
+        .titulo {
+        margin-left: 27.3rem;
+        margin-right: auto;
+        margin-top: auto;
+        margin-bottom: auto;
+        font-size: 3rem;
+        font-weight: bolder;
+        text-decoration: none;
+        }
+
+        footer {
+            background-color: #f0f0f0; 
+            color: #333; 
+            padding: 30px; 
+            text-align: center;
+            margin-top: 50px;
+            font-size: 0.8rem;
+        }
     </style>
 </head>
 <body>
-    <a href="../index.html"><img src="../Imagens/Logo Nintendo.png" alt="Logo Nintendo" class="nint"></a>
+    <header>
+        <nav class="galeria">
+            <a href="../index.html"><img src="../Imagens/Logo Nintendo.png" alt="Logo Nintendo" class="nint"></a>
+            <p class="titulo"><a href="../index.html">Nintendo</a></p>
+        </nav>
+    </header>
+    <main>
+        <a id="backToTopBtn" href="javascript:void(0);" onclick="scrollToTop()"><i class="fas fa-gamepad"></i></a>
+            <script>
+            // Função para rolar a página para o topo suavemente
+            function scrollToTop() {
+            window.scrollTo({
+                top: 0, 
+                behavior: 'smooth' /* Faz a rolagem ser suave */
+            });
+            }
+            // Opcional: Mostrar/Esconder o botão apenas quando o usuário rolar
+            const backToTopBtn = document.getElementById("backToTopBtn");
+            window.onscroll = function() {
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                backToTopBtn.style.display = "block";
+            } else {
+                backToTopBtn.style.display = "none";
+            }
+            };
+            // Esconde o botão por padrão (melhore adicionando 'display: none;' ao CSS)
+            backToTopBtn.style.display = "none"; 
+            </script>
+            <section>
+                <img src="../Imagens/Img Nint/ilusion.png" alt="Ilusion" class="imagem-noticia">
+                <h4 style="text-align:center;">Experimente o teste de jogo mais recente: Disney Illusion Island</h4>
+                <p style="text-align: left;text-indent: 0;">Jogue como Mickey e amigos!</p>
+                <p>Do dia 29 de outubro, às 14h, até o dia 5 de novembro, às 4h59 (horário de Brasília), os assinantes do <a style="color: red;" target="_blank" href="https://www.nintendo.com/pt-br/online/">Nintendo Switch Online</a> podem baixar e experimentar o jogo completo <a href="https://www.nintendo.com/pt-br/store/products/disney-illusion-island-switch/" target="_blank" style="color: red;">Disney Illusion Island</a> sem custo adicional.</p>
+                <h4 style="text-align:center;">Disney Illusion Island</h4>
+                <p>Mickey Mouse, Minnie Mouse, Donald Duck e Goofy embarcam em uma aventura para encontrar três livros místicos e salvar a misteriosa ilha de Monoth. Você encontrará aliados incomuns e inimigos perigosos enquanto joga sozinho ou com até três amigos como o Fab Four no modo cooperativo local. Trabalhem juntos enquanto correm, pulam, nadam e abrem caminho para a vitória!</p>
+                <p>Se você decidir comprar o jogo durante ou após o fim da promoção, poderá transferir seus dados salvos, então não precisará se preocupar em perder seu progresso.</p>
+                <p>Para saber mais sobre o jogo Disney Illusion Island para o console Nintendo Switch™, acesse a <a href="https://www.nintendo.com/pt-br/store/products/disney-illusion-island-switch/"target="_blank" style="color: red;">página oficial.</a></p>
+            </section>
+    </main>
+    <footer>
+        <p>© Copyright 2000-2025 Revista Conecta Comunicação e Participações S.A</p>
+        <p>CNPJ: 03.193.191/0005-77</p>
+    </footer>
 </body>
 </html>

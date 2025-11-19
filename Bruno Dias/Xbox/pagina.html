@@ -1,27 +1,199 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <title>Xbox</title>
     <style>
+        header {
+            position: sticky; 
+            top: 0; 
+            z-index: 100; 
+            background-color: #f0f0f0;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
         body {
-            background-color: linear-gradient(180deg, #f5efe6 0%, #f0e8dc 100%);
             color: #333;
             font-family: 'Roboto', sans-serif;
-            font-size: 1.5rem;
+            font-size: 1.1rem;
             /* CORREÇÃO: CENTRALIZA TODO O TEXTO DO BODY POR PADRÃO */
-            text-align: center; 
+            text-align: center;
+            background-image: linear-gradient(rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.8)), url(../Imagens/Logo\ Xbox2.png);
+            background-size: 30rem;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-position: center center;
+            margin: 0;
         }
+
+        .galeria {
+            display: flex;
+            justify-content: left;
+            gap: 7rem;
+            padding: 15px 0;
+            margin-bottom: 1.5rem;
+            margin-left: 30px;
+        }
+
+        h1, h2, h3, h4, h5 {
+            font-family: 'Montserrat', sans-serif;
+            color: #333;
+            margin-top: 0.5em; 
+            margin-bottom: 0.5em; 
+            font-size: 1.5rem;
+        }
+
+        .imagem-noticia {
+            width: 500px;
+            border-radius: 0px;
+        }
+
         img {
             width: 5rem;
             display: block;
             margin-left: auto;
             margin-right: auto;
+            border-radius: 10px;
+        }
+
+        section p {
+            line-height: 1.6;
+            margin-bottom: 1em;
+            text-indent: 3rem;
+        }
+
+        section {
+            max-width: 800px;
+            margin: 40px auto; 
+            padding: 0 20px;
+            text-align: justify; 
+        }
+
+        #backToTopBtn {
+            position: fixed; 
+            bottom: 30px; 
+            right: 30px;  
+            background-color: black;
+            color: white; 
+            border: none;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-decoration: none; 
+            font-size: 1.5rem;
+            cursor: pointer;
+            transition: background-color 0.3s, transform 0.3s;
+            z-index: 1000; 
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        #backToTopBtn:hover {
+            background-color: #333;
+            transform: translateY(-3px);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+        }
+
+        #backToTopBtn i {
+            line-height: 2;
+        }
+
+        .titulo {
+        margin-left: 30.3rem;
+        margin-right: auto;
+        margin-top: auto;
+        margin-bottom: auto;
+        font-size: 3rem;
+        font-weight: bolder;
+        text-decoration: none;
+        }
+
+        footer {
+            background-color: #f0f0f0; 
+            color: #333; 
+            padding: 30px; 
+            text-align: center;
+            margin-top: 50px;
+            font-size: 0.8rem;
         }
     </style>
 </head>
 <body>
-    <a href="../index.html"><img src="../Imagens/Logo Xbox2.png" alt="Logo Xbox"></a>
+    <header>
+        <nav class="galeria">
+            <a href="../index.html"><img src="../Imagens/Logo Xbox2.png"></a>
+            <p class="titulo"><a href="../index.html">Xbox</a></p>
+        </nav>
+    </header>
+    <main>
+        <a id="backToTopBtn" href="javascript:void(0);" onclick="scrollToTop()"><i class="fas fa-gamepad"></i></a>
+            <script>
+            // Função para rolar a página para o topo suavemente
+            function scrollToTop() {
+            window.scrollTo({
+                top: 0, 
+                behavior: 'smooth' /* Faz a rolagem ser suave */
+            });
+            }
+            // Opcional: Mostrar/Esconder o botão apenas quando o usuário rolar
+            const backToTopBtn = document.getElementById("backToTopBtn");
+            window.onscroll = function() {
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                backToTopBtn.style.display = "block";
+            } else {
+                backToTopBtn.style.display = "none";
+            }
+            };
+            // Esconde o botão por padrão (melhore adicionando 'display: none;' ao CSS)
+            backToTopBtn.style.display = "none"; 
+            </script>
+        <section>
+            <h4 style="text-align:center";>Call of Duty: Black Ops 7 – o que você precisa saber sobre a campanha cooperativa, endgame e mais</h4>
+            <em>
+                <p class="texto-descricao" style="text-align: left; text-indent: 0;">“Mais uma vez, você conhecerá o medo.” — Raul Menendez</p>
+            </em>
+            <p>Quando você entrar pela primeira vez e começar a jogar a Campanha Cooperativa de Call of Duty: Black Ops 7 em 14 de novembro, será inserido em um futuro à beira da catástrofe, no ano de 2035.Você também fará parte do capítulo mais recente de uma saga que se estende por vários jogos Black Ops, chegando a um ponto de inflexão com o infame vilão Raul Menendez, um gigante global de tecnologia chamado The Guild e nosso herói David Mason, aparentemente no alvo deles.Com o lançamento de Black Ops 7 se aproximando, vamos recapitular alguns dos principais momentos da história que nos trouxeram até aqui, além de explorar parte do conteúdo pós-jogo que estará disponível no lançamento com Endgame e muito mais. Vamos nessa!</p>
+            <h4 style="text-align:center";>A história até agora</h4>
+            <img src="../Imagens/Img Xbox/1.png" alt="red" class="imagem-noticia">
+            <p>Quando nos conhecemos o vilão Raul Menendez em Black Ops II, ele era o líder do cartel de armas Menendez, que capturou Frank Woods, um dos heróis do primeiro Black Ops. Salvo em uma ousada missão de resgate por Alex Mason, o protagonista principal de Black Ops, Woods desejava vingança. Mas isso se mostrou caro.</p>
+            <p>Menendez ficou mais ousado após uma missão fracassada da CIA envolvendo Woods e Mason, que resultou na morte de sua irmã, Josefina, e presumivelmente dele também.</p>
+            <p>Anos depois, uma armadilha foi montada que levou Woods a matar fatalmente Alex Mason sob um falso pretexto, com Menendez revelando estar vivo e no centro desse plano hediondo. Ele então atira nos joelhos de Woods e o deixa aleijado para sempre, fazendo-o sofrer pelo que fez.</p>
+            <p>Anos se passam, e Menendez forma o movimento político Cordis Die. Aproveitando as redes sociais para disseminar propaganda, ele atua sob o pseudônimo Ulysses enquanto utiliza secretamente o braço militar do grupo para incitar uma segunda Guerra Fria por meio de tumultos, instabilidade financeira e guerra cibernética.</p>
+            <img src="../Imagens/Img Xbox/2.png" alt="red" class="imagem-noticia">
+            <p>O filho de Alex Mason, David, com a ajuda de Frank Woods, passou a perseguir Menendez para levá-lo à justiça. Ele conseguiu finalmente interromper os planos do vilão e pôr fim à sua ameaça… ou assim pensava. Como revelado no trailer de anúncio de Black Ops 7, Menendez aparentemente retornou.</p>
+            <p>Desta vez, The Guild, um gigante global da tecnologia localizado na cidade mediterrânea de Avalon, utiliza sua tecnologia avançada para proteger os cidadãos e se coloca contra Menendez e seu novo exército.</p>
+            <p>David Mason não está convencido. Desconfiando da Guild e de sua promessa de salvação, agora cabe a ele e a seus operadores de elite da JSOC — Mike Harper, Leilani “50/50” Tupuola e Eric Samuels — descobrir o que realmente está acontecendo.</p>
+            <p>Será que eles vão desvendar as verdadeiras motivações por trás do retorno de Menendez e da ascensão da Guild ao poder? Enquanto o mundo mergulha no caos mais uma vez, David precisa aprender a enfrentar inimigos antigos e novos.</p>
+            <h4 style="text-align:center";>Campanha cooperativa</h4>
+            <img src="../Imagens/Img Xbox/3.png" alt="red" class="imagem-noticia">
+            <p>Isso culmina em uma novidade para a franquia Call of Duty: uma campanha cooperativa completa para 1 a 4 jogadores, permitindo que você vivencie a narrativa envolvente de Black Ops 7 sozinho ou com até três amigos.</p>
+            <p>Treyarch e Raven Software estão trazendo aos jogadores o maior Black Ops de todos, com essa campanha cooperativa inovadora que vai redefinir a experiência da série. A variedade de missões será o foco da campanha, com desafios em diferentes locais, de Nicarágua a Los Angeles, passando por Tóquio e até os recantos mais profundos da mente humana.</p>
+            <p>Você também poderá explorar Avalon, uma cidade expansiva cujos segredos se espalham pela campanha e além.</p>
+            <h4 style="text-align:center";>O Endgame</h4>
+            <img src="../Imagens/Img Xbox/4.png" alt="red" class="imagem-noticia">
+            <p>Depois de completar as primeiras 11 missões da campanha cooperativa, você desbloqueará o Endgame, que encarrega a JSOC de explorar Avalon, derrubar as fortalezas da Guild e ficar atento às zonas de exposição que estão liberando grandes quantidades de uma toxina misteriosa na cidade.</p>
+            <p>Projetado para 1 a 32 jogadores em esquadrões de até quatro pessoas, o Endgame desafia você a avançar por zonas cada vez mais difíceis neste mapa enorme, onde é possível evoluir Árvores de Habilidades e Classificações de Combate exclusivas, cumprir tarefas, aumentar a raridade das armas e fazer exfiltração para preservar o progresso conquistado.</p>
+            <p>O melhor de tudo é que o progresso do jogador e o aprimoramento das armas se conectam a isso, com 90 camuflagens exclusivas para desbloquear nas armas de lançamento e recompensas de camuflagem dedicadas para a campanha cooperativa.</p>
+            <p>O Endgame precisa que todos trabalhem juntos durante o deslocamento em Avalon. Os esquadrões podem se dividir para cumprir objetivos próprios ou lutar ao lado de outros para aumentar as chances em batalhas difíceis.</p>
+            <img src="../Imagens/Img Xbox/5.png" alt="red" class="imagem-noticia">
+            <p>O sistema C-Link C.O.M.B.A.T. OS libera a personalização completa do Armamento no Endgame, permitindo que você escolha as ferramentas preferidas para atingir seu objetivo: ganhar poder suficiente para chegar às zonas de exposição mais altas.</p>
+            <p>Isso começa com a escolha de um dos quatro Slots de Operador (cada um representa a trajetória de poder dedicada de um personagem). Fortaleça-se durante o jogo para aumentar sua Classificação de Combate e conquistar Habilidades e Aprimoramentos de Poder em Vida, Armadura, Velocidade e Dano. Mas tome cuidado: se for eliminado em ação, você perde tudo.</p>
+            <p>Ao criar um Armamento, você pode escolher uma Habilidade Principal e uma Secundária para seu Operador. Elas concedem novos movimentos, ferramentas poderosas e outras vantagens.</p>
+            <p>Com o Armamento pronto, mergulhe em Avalon usando um wingsuit e comece a explorar a vasta paisagem a pé ou em veículos.</p>
+            <h4 style="text-align:center";>Adquira Black Ops 7 hoje mesmo</h4>
+            <p>A Campanha Cooperativa e o Endgame são apenas duas das funcionalidades que compõem a experiência completa de Call of Duty: Black Ops 7, que também inclui o modo Multiplayer de alto nível, com 16 mapas eletrizantes de 6v6 e dois mapas de 20v20 disponíveis no lançamento, além do retorno do modo Zumbis por Rodadas, incluindo o maior mapa de Zumbis por Rodadas da história da franquia Black Ops.</p>
+            <p>Não deixe de conferir o <a target="_blank" href="https://www.callofduty.com/br/pt/blog" style="color: #107C10;">blog oficial de Call of Duty</a> para mais informações sobre o que esperar de Black Ops 7.</p>
+            <p><a target="_blank" href="https://www.xbox.com/pt-br/games/call-of-duty-black-ops-7" style="color: #107C10;">Call of Duty: Black Ops 7</a> será lançado em 14 de novembro para Xbox Series X|S, Xbox One, Xbox no PC e na Nuvem – com suporte ao Xbox Play Anywhere e disponível desde o primeiro dia no Game Pass Ultimate e PC Game Pass – além de PlayStation 4 & 5, Battle.net e Steam.</p>
+            <p>Faça a pré-venda de qualquer edição digital ou assine alguns planos selecionados do Game Pass para receber acesso antecipado ao Beta aberto (Termos), além do Operador Reznov e da camuflagem Guild Override para armas (Termos). Saiba mais aqui.</p>
+        </section>
+    </main>
+    <footer>
+        <p>© Copyright 2000-2025 Revista Conecta Comunicação e Participações S.A</p>
+        <p>CNPJ: 03.193.191/0005-77</p>
+    </footer>
 </body>
 </html>
