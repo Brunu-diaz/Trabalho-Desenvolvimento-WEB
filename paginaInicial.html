@@ -1,0 +1,814 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700&family=Roboto:wght@300;400;500&display=swap"
+        rel="stylesheet">
+    <style>
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        body {
+            font-family: Poppins;
+            background: linear-gradient(180deg, #f3e7d3 0%, #e9dcc3 100%);
+        }
+
+        header {
+            position: sticky;
+        }
+
+        .logo {
+            color: #1C435A;
+            max-height: 150px;
+            height: auto;
+            width: auto;
+        }
+
+        .carrossel {
+            display: flex;
+            width: 100%;
+            height: 65vh;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .slides {
+            display: flex;
+            width: 300%;
+            height: 100%;
+            animation: deslizar 9s infinite;
+        }
+
+        .carrossel img {
+            display: flex;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+            flex-shrink: 0;
+            filter: brightness(0.5);
+        }
+
+        @keyframes deslizar {
+
+            0%,
+            30% {
+                transform: translateX(0);
+            }
+
+            33%,
+            63% {
+                transform: translateX(-100%);
+            }
+
+            66%,
+            96% {
+                transform: translateX(-200%);
+            }
+
+            100% {
+                transform: translateX(0);
+            }
+        }
+
+        .nav-bar {
+            background: linear-gradient(180deg, #f0e1c8 0%, #ead7b8 100%);
+            border: 1px solid transparent;
+            border-radius: 10px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            height: 60px;
+            padding: 0px 25px;
+            z-index: 999;
+        }
+
+        .menu {
+            display: flex;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            gap: 25px;
+            justify-content: center;
+            flex: 1;
+        }
+
+        .menu a {
+            color: #1C435A;
+        }
+
+        .card-span {
+            position: absolute;
+            top: 40%;
+            left: 3%;
+            transform: translateY(-50%);
+            border: 1px solid white;
+            border-radius: 12px;
+            background: rgba(15, 23, 42, 0.8);
+            padding: 10px;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .texto {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            color: white;
+            font-size: 12px;
+            font-weight: 700;
+        }
+
+        .texto span {
+            width: 6px;
+            height: 6px;
+            border-radius: 999px;
+            background: #22c55e;
+            display: inline-block;
+        }
+
+        .texto2 {
+            position: absolute;
+            color: white;
+            top: 42%;
+            left: 3%;
+            max-width: 650px;
+
+        }
+
+        .texto2 h1 {
+            font-size: 32px;
+            font-weight: 700;
+            margin-bottom: 8px;
+        }
+
+        .texto2 p {
+            color: #a3a0a0;
+            font-size: 16px;
+            font-weight: 400;
+        }
+
+        .butões {
+            position: absolute;
+            color: white;
+            border: 1px solid white;
+            border-radius: 10px;
+            padding: 0 5px 0 5px;
+            top: 85%;
+            left: 3%;
+            background: #1C435A;
+            transition: .5s ease;
+            cursor: pointer;
+        }
+
+        .butões a {
+            font-size: 15px;
+        }
+
+        .butões:hover {
+            transform: translateY(-5px);
+            background: #163546;
+        }
+
+        .menu a {
+            position: relative;
+            color: #163546;
+            font-weight: 600;
+            padding-bottom: 5px;
+        }
+
+        .menu a::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            height: 2px;
+            background: #1C435A;
+            transform: scaleX(0);
+            transform-origin: left;
+            transition: transform 0.3s ease;
+            opacity: 1;
+        }
+
+        .menu a:hover::after {
+            transform: scaleX(1);
+        }
+
+        .card-principal {
+            display: flex;
+            flex-direction: row;
+            background: #faf3e7;
+            width: 75%;
+            height: 300px;
+            margin: 50px auto;
+            border-radius: 10px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .edicao {
+            display: flex;
+            align-items: center;
+            position: absolute;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 12px;
+            padding: 0 5px 0 5px;
+            margin: 0;
+            background: rgba(15, 23, 42, 0.55);
+            backdrop-filter: blur(4px);
+            left: 20px;
+            top: 20px;
+        }
+
+        .edicao p {
+            margin: 0;
+            font-size: 12px;
+            color: white;
+        }
+
+        .imagem-card {
+            width: 50%;
+            height: 100%;
+        }
+
+        .imagem-card img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .receita {
+            width: 50%;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            gap: 10px;
+        }
+
+        .receita span {
+            font-size: 12px;
+            color: #6b7280;
+        }
+
+        .receita h2 {
+            color:  #1C435A;
+            font-size: 26px;
+            margin: 0;
+        }
+
+        .receita p {
+            font-size: 14px;
+            margin: 0;
+            white-space: pre-line;
+        }
+
+        .card-receita {
+            display: inline-flex;
+            justify-content: center;
+            border: 1px solid black;
+            border-radius: 12px;
+            align-items: center;
+            padding: 0;
+            margin-top: 15px;
+            cursor: pointer;
+            background: #1C435A;
+            width: 20%;
+            transition: 0.3s ease;
+        }
+
+        .card-receita a {
+            color: white;
+            font-weight: 600;
+            font-size: 14px;
+        }
+
+        .card-receita:hover {
+            transform: translateY(-5px);
+        }
+
+        .marca {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .marca h1 {
+            text-shadow: 0 3px 12px rgba(0, 0, 0, 0.12);
+        }
+
+        .marcacao {
+            background: #163546;
+            border: 1px solid black;
+            border-radius: 100px;
+            height: 25px;
+            width: 7px;
+        }
+
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            margin: auto;
+            width: 80%;
+            gap: 50px;
+        }
+
+        .cards-unitarios {
+            box-shadow: 0 8px 24px rgba(0, 0, 0, .05);
+            border: none;
+            width: 350px;
+            height: 450px;
+            border-radius: 14px;
+            overflow: hidden;
+            flex-direction: column;
+            background: #f8f1e4;
+            display: flex;
+            transition: 0.3s ease;
+            cursor: pointer;
+        }
+
+        .cards-unitarios .imagem-card {
+            height: 64%;
+            width: 100%;
+        }
+
+        .cards-unitarios .conteudo-card {
+            height: 50%;
+            padding: 15px;
+        }
+
+        .cards-unitarios a {
+            display: block;
+            height: 100%;
+            width: 100%;
+        }
+
+        .cards-unitarios:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 4px 16px #163546;
+        }
+
+        .conteudo-card h2 {
+            color:  #1C435A;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .conteudo-card p {
+            font-size: 15px;
+            color: #6b7280;
+        }
+
+        .info {
+            padding: 4px 10px;
+            background: #1C435A;
+            border-radius: 16px;
+            font-size: 12px;
+            color: white;
+            opacity: 0.85;
+        }
+
+        .revista {
+            max-width: 620px;
+
+        }
+
+        .lista {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        .revista h1{
+        color: #1C435A;
+        }
+
+        .revista p {
+            color: #4b5563;
+        }
+
+        .lista li {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 18px;
+            margin-bottom: 10px;
+            color: #4b5563;
+        }
+
+        .lista span {
+            width: 26px;
+            height: 26px;
+            background: #22c55e;
+            color: #046528;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 16px;
+        }
+
+        .secao {
+            display: flex;
+            margin-top: 20px;
+            gap: 70px;
+        }
+
+        .cadastro {
+            background: #f8f1e4;
+            width: 100%;
+            min-height: 400px;
+            max-width: 600px;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+            padding: 20px;
+            gap: 18px;
+        }
+
+        .cadastro p {
+            font-size: 14px;
+            margin-bottom: 10px;
+            color: #4b5563;
+        }
+
+        .cadastro h3 {
+            font-size: 24px;
+            margin: 0;
+            color: #1C435A;
+        }
+
+        .campo {
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
+        }
+
+        .campo label {
+            font-size: 13px;
+            font-weight: 500;
+            color: #1C435A;
+        }
+
+        .campo input,
+        .campo select {
+            width: 100%;
+            padding: 12px 14px;
+            box-sizing: border-box;
+            border-radius: 10px;
+            border: 1px solid #d1d5db;
+            outline: none;
+            font-family: inherit;
+            font-size: 13px;
+            background: transparent;
+            color: #7c7d7f;
+            transition: all .25s ease;
+        }
+
+        .campo input:focus,
+        .campo select:focus {
+            border-color: #38bdf8;
+            box-shadow: 0 0 0 1px rgba(37, 99, 235, 0.2);
+            background: rgba(148, 163, 184, 0.08);
+        }
+
+        .form-assinatura small {
+            font-size: 11px;
+            color: #6b7280;
+        }
+
+        .botao {
+            background: #154158;
+            color: white;
+            padding: 14px 28px;
+            border-radius: 10px;
+            font-size: 16px;
+            border: none;
+            cursor: pointer;
+            display: flex;
+            margin-top: 15px;
+        }
+
+        .botao:hover {
+            background: #163546;
+            transform: translateY(-2px);
+        }
+        .botao-escuro{
+            background: none;
+            border: 1px solid #1C435A ;
+            color:#1C435A ;
+            cursor: pointer;
+            border-radius: 8px;
+            padding: 6px 12px;
+            font-size: 16px;
+
+        }
+        body.dark{
+           background: linear-gradient(180deg, #060607 0%, #0d0d0f 100%); 
+        }
+        body.dark .nav-bar{
+            background: rgba(20, 20, 20, 0.6);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+        }
+        body.dark .menu a{
+            color: #e5e7eb; 
+        }
+        body.dark .menu a::after{
+            background: #38bdf8;
+        }
+        body.dark .botao-escuro{
+            border-color: #e5e7eb;
+            color: #f7f7f7;
+            background: rgba(255, 255, 255, 0.1);
+        }
+        body.dark .logo{
+            filter: brightness(2);
+        }
+        body.dark .card-principal{
+            background: #111215;
+            color: #e5e5e5;
+        }
+        body.dark .receita h2{
+            color: #f8fafc;
+        }
+        body.dark .receita span{
+            color: #9ca3af;
+        }
+        body.dark .card-receita{
+            background: #1e40af;
+            border-color: #1e3a8a;
+        }
+        body.dark .card-receita:hover{
+            background: #1d4ed8;
+        }
+        body.dark .cards-unitarios{
+            background: #111215;
+            box-shadow: 0 8px 24px rgba(0, 0, 0, .5);
+        }
+        body.dark .conteudo-card h2{
+            color: #f8fafc;
+        }
+        body.dark .conteudo-card p{
+            color: #9ca3af;
+        }
+        body.dark .info{
+            background: #1e3a8a;
+        }
+        body.dark .marca h1{
+            color: #f3f4f6;
+        }
+        body.dark .marcacao{
+            background: #2563eb;
+            border-color: #1e3a8a;
+        }
+        body.dark .cadastro{
+            background: #111215;
+            box-shadow: 0 0 30px rgba(255, 255, 255, 0.02);
+        }
+        body.dark .cadastro h3{
+            color: #f8fafc;
+        }
+        body.dark .cadastro p{
+            color: #9ca3af;
+        }
+        body.dark .campo label{
+            color: #f3f4f6;
+        }
+        body.dark .campo input,
+        body.dark .campo select{
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid #374151;
+            color: #e5e7eb;
+        }
+        body.dark select:focus{
+            border-color: #38bdf8;
+            box-shadow: 0 0 0 1px #38bdf8;
+        }
+        body.dark select option{
+            background-color: #1a1b1f;     
+            color: #f1f1f1; 
+        }
+        body.dark small{
+            color: #9ca3af !important;
+        }
+        body.dark botao{
+            background: #1e40af;
+        }
+        body.dark .botao:hover{
+            background: #1d4ed8;
+        }
+        body.dark .lista li{
+            color: #d1d5db;
+        }
+        body.dark .lista span{
+            background: #22c55e;
+            color: #064e3b;
+        }
+    
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav class="nav-bar">
+            <img src="imgs/logo.png" class="logo" alt="">
+            <ul class="menu">
+                <li><a href="#">Esportes</a></li>
+                <li><a href="#">Receitas</a></li>
+                <li><a href="#">Games</a></li>
+                <li><a href="#">Esquadria</a></li>
+                <li><a href="#">Tema</a></li>
+                <li><a href="#">Tema</a></li>
+            </ul>
+            <button id="modo-escuro" class="botao-escuro">🌙</button>
+        </nav>
+    </header>
+
+    <section>
+        <div class="carrossel">
+            <div class="slides">
+
+                <img src="./imgs/basquete-betsul-brasileiros-nbalat-1024x683.jpg" alt="">
+                <img src="./imgs/hq720.jpg" alt="">
+                <img src="./imgs/gol-estevao-brasil-senegal-e1763225252113.webp" alt="">
+            </div>
+            <div class="card-span">
+                <div class="texto">
+                    <span></span>
+                    EDIÇÃO SEMANAL • PREMIUM
+                </div>
+            </div>
+            <div class="texto2">
+                <h1>A revista digital que conecta todas as sua preferências</h1>
+                <p>Espotes, games, receitas, esquadria tudo isso em um so lugar, com conteudo sempre atualizado</p>
+            </div>
+            <div class="butões">
+                <a href="#form">Assinar agora</a>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div class="card-principal">
+            <div class="edicao">
+                <p>Edição 12 • Novembro 2025</p>
+            </div>
+            <div class="imagem-card"><img src="imgs/Bolo-tradicional-de-Chocolate-com-calda-de-chocolate-1.jpg" alt="">
+            </div>
+            <div class="receita">
+
+                <h2>Receita de bolo de chocolate da vovó</h2>
+                <span>Por Jeovanice • 12 min de leitura</span>
+                <p>3 ovos
+                    2 xícaras de açúcar
+                    1 xícara de leite
+                    ...</p>
+                <div class="card-receita">
+                    <a href="">Ler Agora</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div class="marca">
+            <div class="marcacao"></div>
+            <h1>Explorar Temas</h1>
+        </div>
+        <div class="cards">
+            <div class="cards-unitarios">
+                <a>
+                    <div class="imagem-card"><img src="imgs/basquete-betsul-brasileiros-nbalat-1024x683.jpg"> </div>
+                    <div class="conteudo-card">
+                        <h2>Esportes <div class="info"><span>Em alta🚀</span></div>
+                        </h2>
+                        <p>Resultados, análises, bastidores e histórias que movimentam o mundo esportivo.</p>
+                    </div>
+                </a>
+            </div>
+            <div class="cards-unitarios">
+                <a>
+                    <div class="imagem-card"><img src="imgs/Bolo-tradicional-de-Chocolate-com-calda-de-chocolate-1.jpg">
+                    </div>
+                    <div class="conteudo-card">
+                        <h2>Receitas<div class="info"><span>Popular 🎂</span></h2>
+                        <p>Do café da manhã ao jantar especial, receitas práticas e cheias de sabor.</p>
+                    </div>
+                </a>
+            </div>
+            <div class="cards-unitarios">
+                <a>
+                    <div class="imagem-card"><img src="imgs/ghost.jpeg"> </div>
+                    <div class="conteudo-card">
+                        <h2>Games<div class="info"><span>Destaque🔥</span></h2>
+                        <p>Reviews, lançamentos, curiosidades e o universo completo dos jogos digitais.</p>
+                    </div>
+                </a>
+            </div>
+            <div class="cards-unitarios">
+                <a>
+                    <div class="imagem-card"><img src="imgs/esquadria5.jpg"> </div>
+                    <div class="conteudo-card">
+                        <h2>Esquadria</h2>
+                        <p>Duráveis, leves e resistentes à corrosão, as esquadrias de alumínio garantem elegância e
+                            funcionalidade </p>
+                    </div>
+                </a>
+            </div>
+            <div class="cards-unitarios">
+                <a>
+                    <div class="imagem-card"><img src="imgs/basquete-betsul-brasileiros-nbalat-1024x683.jpg"> </div>
+                    <div class="conteudo-card">
+                        <h2>Lorem Ipsum </h2>
+                        <p>s simply dummy text of the printing and typesetting industry.</p>
+                    </div>
+                </a>
+            </div>
+            <div class="cards-unitarios">
+                <a>
+                    <div class="imagem-card"><img src="imgs/basquete-betsul-brasileiros-nbalat-1024x683.jpg"> </div>
+                    <div class="conteudo-card">
+                        <h2>Lorem Ipsum</h2>
+                        <p>s simply dummy text of the printing and typesetting industry.</p>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section class="secao">
+        <div class="revista">
+            <h1>Assine a Revista Conectar</h1>
+            <p>Tenha acesso a noticias completas, edições especiais, conteúdos exclusivos e muito mais. Ideal para quem
+                gosta de estar sempre informado</p>
+            <ul class="lista">
+                <li><span>✔︎</span> Acesso ilimitado a todas as editoras</li>
+                <li><span>✔︎</span> Edições especiais mensais</li>
+                <li><span>✔︎</span> Área do assiante com favoritos e histórico</li>
+            </ul>
+        </div>
+        <form class="cadastro" id="form">
+            <h3>Comece sua assinatura</h3>
+            <p>Preencha os dados e escolha seu plano ideal</p>
+            <div class="campo">
+
+                <label for="nome">Nome Completo</label>
+                <input type="text" name="nome" id="nome" required>
+            </div>
+            <div class="campo">
+
+                <label for="email">Email</label>
+                <input type="email" name="email" id="email" required>
+            </div>
+            <div class="campo">
+
+                <label for="plano">Plano</label>
+                <select id="plano" name="plano" required>
+                    <option value="">Selecione um plano</option>
+                    <option value="mensal">Mensal — R$ 19,90</option>
+                    <option value="trimestral">Trimestral — R$ 49,90</option>
+                    <option value="anual">Anual — R$ 169,90</option>
+                </select>
+            </div>
+
+            <div class="campo">
+
+                <label for="area">Área de maior interesse</label>
+                <select id="area" name="area">
+                    <option value="">Selecione</option>
+                    <option value="esportes">Esportes</option>
+                    <option value="receitas">Receitas</option>
+                    <option value="games">Games</option>
+                    <option value="musica">Música</option>
+                    <option value="politica">Política</option>
+                </select>
+            </div>
+            <small style="color: #a3a0a0;">Ao continuar, você concorda em receber comunicações da Revista Conectar. Você
+                pode cancelar a
+                qualquer momento.</small>
+            <button class="botao">Finalizar assinatura</button>
+        </form>
+    </section>
+</body>
+<script>
+    const botao = document.getElementById("modo-escuro")
+
+    botao.addEventListener("click", ()=>{
+        document.body.classList.toggle("dark")
+    if(document.body.classList.contains("dark")){
+       botao.innerText = "☀️"
+    }else{
+        botao.innerText = "🌕"
+    }
+    })
+</script>
+
+</html>
