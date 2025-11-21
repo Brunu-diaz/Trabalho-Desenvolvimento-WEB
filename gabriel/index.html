@@ -15,7 +15,17 @@
             background: linear-gradient(180deg, #f5efe6 0%, #f0e8dc 100%);
             min-height: 100vh;
         }
-
+        .botao-escuro{
+         padding: 6px 12px;
+         position: absolute;
+         top: 20px;
+         right: 20px;
+         font-size: 22px;
+         background: none;
+         border: none;
+         cursor: pointer;
+         z-index: 999;
+        }
         .nav-esporteagora {
             display: flex;
             align-items: center;
@@ -53,15 +63,6 @@
             color: #7a7a7a;
             margin-top: -2px;
         }
-
-        .modo-escuro-input {
-            position: absolute;
-            top: 0px;
-            right: 5%;
-            display: flex;
-            justify-content: center;
-        }
-
         .nav-style ul {
             list-style: none;
             display: flex;
@@ -346,213 +347,178 @@
             padding: 20px;
         }
 
-        #modo-escuro:checked~.troca-tema {
+        body.dark {
             background: linear-gradient(180deg, #060607 0%, #0d0d0f 100%); 
         }
 
-        #modo-escuro:checked~.troca-tema .nav-style {
+        body.dark .nav-style {
             background: linear-gradient(180deg, rgba(10, 10, 10, 0.95), rgba(10, 10, 10, 0.85));
         }
 
 
-        #modo-escuro:checked~.troca-tema .nav-subtitulo {
+        body.dark .nav-subtitulo {
             color: #aaa;
         }
 
-        #modo-escuro:checked~.troca-tema .nav-style li {
+        body.dark .nav-style li {
             color: #ddd;
         }
-        #modo-escuro:checked~.troca-tema .nav-style li:hover{
+        body.dark .nav-style li:hover{
             background-color: rgba(255, 255, 255, 0.15);
         }
 
-        #modo-escuro:checked~.troca-tema .card-noticia {
+        body.dark .card-noticia {
             background: linear-gradient(180deg, rgba(10, 10, 10, 0.9), rgba(10, 10, 10, 0.8));
             border-color: #000;
         }
 
-        #modo-escuro:checked~.troca-tema .texto-card {
+        body.dark .texto-card {
             color: #eee;
         }
 
-        #modo-escuro:checked~.troca-tema .texto-card a {
+        body.dark .texto-card a {
             background: rgba(255, 255, 255, 0.07);
             border-color: #333;
             color: #fff;
         }
 
-        #modo-escuro:checked~.troca-tema .texto-card a:hover {
+        body.dark .texto-card a:hover {
             background: rgba(255, 255, 255, 0.15);
         }
 
-        #modo-escuro:checked~.troca-tema .card-metade {
+        body.dark .card-metade {
             background: #000;
             box-shadow: 0 0 20px rgba(255, 0, 0, 0.15);
         }
 
-        #modo-escuro:checked~.troca-tema .conteudo-card {
+        body.dark .conteudo-card {
             background: rgba(255, 255, 255, 0.06);
         }
 
-        #modo-escuro:checked~.troca-tema .conteudo-card h3 {
+        body.dark .conteudo-card h3 {
             color: #eee;
         }
 
-        #modo-escuro:checked~.troca-tema .conteudo-card p {
+        body.dark .conteudo-card p {
             color: #aaa;
         }
 
-        #modo-escuro:checked~.troca-tema .imagem-card,
-        #modo-escuro:checked~.troca-tema .imagem-card2 {
+        body.dark .imagem-card,
+        body.dark .imagem-card2 {
             border-color: #000;
         }
 
-        #modo-escuro:checked~.troca-tema .tabela-campeonato {
+        body.dark .tabela-campeonato {
             background: #0e0e0e;
             color: #ddd;
             border-color: #000;
             box-shadow: 0 0 20px rgba(255, 255, 255, 0.08);
         }
 
-        #modo-escuro:checked~.troca-tema .tabela-campeonato td {
+        body.dark .tabela-campeonato td {
             color: #ddd;
         }
 
-        #modo-escuro:checked~.troca-tema .tabela-campeonato th {
+        body.dark .tabela-campeonato th {
             background: #1C435A;
             color: #fff;
         }
 
-        #modo-escuro:checked~.troca-tema .tabela-campeonato tr {
+        body.dark .tabela-campeonato tr {
             border-bottom: 1px solid rgba(255, 255, 255, 0.08);
         }
 
-        #modo-escuro:checked~.troca-tema .tabela {
+        body.dark .tabela {
             background: linear-gradient(180deg, rgba(17, 17, 17, 0.8), rgba(14, 14, 14, 0.85));
             border: 1px solid #000;
         }
 
-        #modo-escuro:checked~.troca-tema .resultado {
+        body.dark .resultado {
             background: linear-gradient(180deg, rgba(255, 255, 255, 0.01), rgba(255, 255, 255, 0.02));
             border: 1px solid #333;
         }
 
-        #modo-escuro:checked~.troca-tema .resultado h4,
-        #modo-escuro:checked~.troca-tema .resultado *,
-        #modo-escuro:checked~.troca-tema .lista{
+        body.dark .resultado h4,
+        body.dark .resultado *,
+        body.dark .lista{
             color: white !important ;
         }
 
-        #modo-escuro:checked~.troca-tema .times {
+        body.dark .times {
             color: #eee;
         }
 
-        #modo-escuro:checked~.troca-tema .gols {
+        body.dark .gols {
             color: red;
         }
-        #modo-escuro:checked~.troca-tema #basquete h2{
+        body.dark #basquete h2{
             color: white !important;
         }
-        #modo-escuro:checked~.troca-tema #mma h2{
+        body.dark #mma h2{
             color: white !important;
         }
-        #modo-escuro:checked~.troca-tema #basquete h2{
+        body.dark #basquete h2{
             color: white !important;
         }
-        #modo-escuro:checked~.troca-tema .conteudo-card h3{
+        body.dark .conteudo-card h3{
             color: white !important;
         }
         
-        #modo-escuro:checked~.troca-tema .lutadores-destaque {
+        body.dark .lutadores-destaque {
             background: #0e0e0e;
             border: 1px solid #222;
             box-shadow: 0 0 15px rgba(255, 255, 255, 0.05);
         }
 
-        #modo-escuro:checked~.troca-tema .lutador {
+        body.dark .lutador {
             background: rgba(255, 255, 255, 0.05);
             border-radius: 14px;
         }
 
-        #modo-escuro:checked~.troca-tema .lutador:hover {
+        body.dark .lutador:hover {
             background: rgba(255, 255, 255, 0.10);
         }
 
-        #modo-escuro:checked~.troca-tema .lutador .info h3 {
+        body.dark .lutador .info h3 {
             color: #eee;
         }
 
-        #modo-escuro:checked~.troca-tema .lutador .info p {
+        body.dark .lutador .info p {
             color: #bbb;
         }
 
-        #modo-escuro:checked~.troca-tema .imagem-lutador {
+        body.dark .imagem-lutador {
             outline: 2px solid rgba(255, 255, 255, 0.1);
         }
 
-        #modo-escuro:checked~.troca-tema .caixa {
+        body.dark .caixa {
             background: #0e0e0e;
             border: 1px solid #222;
             box-shadow: 0 0 10px rgba(255, 255, 255, 0.05);
         }
-        #modo-escuro:checked~.troca-tema .caixa h4{
+        body.dark .caixa h4{
             color: white !important;
         }
 
-        #modo-escuro:checked~.troca-tema .caixa button {
+        body.dark .caixa button {
             background: #e31b23;
             color: #fff;
             border: none;
             box-shadow: 0 0 10px rgba(227, 27, 35, 0.4);
         }
 
-        #modo-escuro:checked~.troca-tema .caixa button:hover {
+        body.dark .caixa button:hover {
             background: #bb161e;
             transform: translateY(-2px);
         }
 
-        #modo-escuro:checked~.troca-tema input {
+        body.dark input {
             background: #111;
             color: #eee;
             border-color: #333;
         }
 
-        #modo-escuro:checked+.switch {
-            background: #1C435A;
-        }
-
-        #modo-escuro:checked+.switch::after {
-            transform: translateX(26px);
-        }
-
-        #modo-escuro {
-            display: none;
-        }
-
-        .switch {
-            width: 50px;
-            height: 24px;
-            background: #bbb;
-            border-radius: 30px;
-            position: fixed;
-            top: 20px;
-            right: 20px;
-            z-index: 9999;
-            cursor: pointer;
-        }
-
-        .switch::after {
-            content: "";
-            width: 20px;
-            height: 20px;
-            background: white;
-            border-radius: 50%;
-            position: absolute;
-            top: 2px;
-            left: 2px;
-            transition: all 0.3s ease;
-        }
-
+      
 
         @media (max-width: 768px) {
 
@@ -655,10 +621,6 @@
 </head>
 
 <body>
-    <input type="checkbox" id="modo-escuro">
-    <label for="modo-escuro" class="switch"></label>
-    <div class="troca-tema">
-
         <nav class="nav-style">
             <div class="nav-esporteagora">
                 <div class="nav-marca">ES</div>
@@ -670,13 +632,12 @@
             </div>
 
             <input type="search" placeholder="pesquise no site...">
-            <div class="modo-escuro-input">
-            </div>
             <ul>
                 <li><a href="#futebol">Futebol</a></li>
                 <li><a href="#basquete">Basquete</a></li>
                 <li><a href="#mma">MMA</a></li>
             </ul>
+            <button id="modo-escuro" class="botao-escuro">🌕</button>
 
         </nav>
         <section class="secao-1" id="futebol">
@@ -977,5 +938,17 @@
 
 
 </body>
+<script>
+    const botao = document.getElementById("modo-escuro")
+
+    botao.addEventListener("click", ()=>{
+        document.body.classList.toggle("dark")
+    if(document.body.classList.contains("dark")){
+       botao.innerText = "☀️"
+    }else{
+        botao.innerText = "🌕"
+    }
+    })
+</script>
 
 </html>
