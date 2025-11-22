@@ -4,23 +4,32 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700&family=Roboto:wght@300;400;500&display=swap"
-        rel="stylesheet">
+    <title>Revista Conecta</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
     <style>
         a {
             text-decoration: none;
             color: inherit;
         }
-
+        footer {
+            background-color: #f0f0f0; 
+            color: #1C435A; 
+            padding: 30px; 
+            text-align: center;
+            margin-top: 50px;
+            font-size: 0.8rem;
+        }
         body {
             font-family: Poppins;
-            background: linear-gradient(180deg, #f3e7d3 0%, #e9dcc3 100%);
+            background: linear-gradient(rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.8));
+            margin: 0;
         }
 
         header {
-            position: sticky;
+            position: sticky; 
+            top: 0; 
+            z-index: 100;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
         }
 
         .logo {
@@ -78,7 +87,7 @@
         }
 
         .nav-bar {
-            background: linear-gradient(180deg, #f0e1c8 0%, #ead7b8 100%);
+            background: #f0f0f0;
             border: 1px solid transparent;
             border-radius: 10px;
             display: flex;
@@ -206,7 +215,7 @@
         .card-principal {
             display: flex;
             flex-direction: row;
-            background: #faf3e7;
+            background: #f0f0f0;
             width: 75%;
             height: 300px;
             margin: 50px auto;
@@ -312,6 +321,7 @@
             border-radius: 100px;
             height: 25px;
             width: 7px;
+            margin-left: 80px;
         }
 
         .cards {
@@ -330,7 +340,7 @@
             border-radius: 14px;
             overflow: hidden;
             flex-direction: column;
-            background: #f8f1e4;
+            background: #f0f0f0;
             display: flex;
             transition: 0.3s ease;
             cursor: pointer;
@@ -421,10 +431,11 @@
             display: flex;
             margin-top: 20px;
             gap: 70px;
+            margin-left: 80px;
         }
 
         .cadastro {
-            background: #f8f1e4;
+            background: #f0f0f0;
             width: 100%;
             min-height: 400px;
             max-width: 600px;
@@ -458,8 +469,7 @@
             color: #1C435A;
         }
 
-        .campo input,
-        .campo select {
+        .campo input, .campo select {
             width: 100%;
             padding: 12px 14px;
             box-sizing: border-box;
@@ -473,8 +483,7 @@
             transition: all .25s ease;
         }
 
-        .campo input:focus,
-        .campo select:focus {
+        .campo input:focus, .campo select:focus {
             border-color: #38bdf8;
             box-shadow: 0 0 0 1px rgba(37, 99, 235, 0.2);
             background: rgba(148, 163, 184, 0.08);
@@ -607,11 +616,39 @@
             background: #22c55e;
             color: #064e3b;
         }
-        body.dark .botao-escuro{
-            background: transparent;
+        #backToTopBtn {
+            position: fixed; 
+            bottom: 30px; 
+            right: 30px;
+            background-color: #f0f0f0;
+            color: white; 
             border: none;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-decoration: none; 
+            font-size: 1.5rem; 
+            cursor: pointer;
+            transition: background-color 0.3s, transform 0.3s;
+            z-index: 1000; 
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
         }
-    
+
+        #backToTopBtn:hover {
+            background-color: #f0f0f0;
+            transform: translateY(-3px);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+        }
+
+        .icone-btn-imagem {
+            width: 80%;
+            height: 100%;
+            object-fit: contain;
+        }
+
     </style>
 </head>
 
@@ -624,20 +661,22 @@
                 <li><a href="Jeovanice/index.html">Receitas</a></li>
                 <li><a href="Bruno Dias/index.html">Games</a></li>
                 <li><a href="marivaldo/index.html">Esquadria</a></li>
-                <li><a href="#">Tema</a></li>
-                <li><a href="#">Tema</a></li>
+                <li><a href="#">Geek</a></li>
+                <li><a href="#">Música</a></li>
             </ul>
             <button id="modo-escuro" class="botao-escuro">🌕</button>
         </nav>
     </header>
-
+    <a id="backToTopBtn" href="javascript:void(0);" onclick="scrollToTop()">
+            <img src="/Trabalho-Desenvolvimento-WEB/Jeovanice/Imagens/Cópia de Design sem nome (7).png" alt="Ícone de Bolo" class="icone-btn-imagem"></a>
     <section>
         <div class="carrossel">
             <div class="slides">
 
-                <img src="./imgs/basquete-betsul-brasileiros-nbalat-1024x683.jpg" alt="">
+                <img src="./imgs/esquadria5.jpg" alt="">
                 <img src="./imgs/hq720.jpg" alt="">
-                <img src="./imgs/gol-estevao-brasil-senegal-e1763225252113.webp" alt="">
+                <img src="imgs/Design sem nome (31).png" alt="">
+
             </div>
             <div class="card-span">
                 <div class="texto">
@@ -660,7 +699,7 @@
             <div class="edicao">
                 <p>Edição 12 • Novembro 2025</p>
             </div>
-            <div class="imagem-card"><img src="imgs/Bolo-tradicional-de-Chocolate-com-calda-de-chocolate-1.jpg" alt="">
+            <div class="imagem-card"><img src="Jeovanice/Imagens/Cópia de Design sem nome (2).png" alt="">
             </div>
             <div class="receita">
 
@@ -695,7 +734,7 @@
             </div>
             <div class="cards-unitarios">
                 <a href="Jeovanice/index.html">
-                    <div class="imagem-card"><img src="imgs/Bolo-tradicional-de-Chocolate-com-calda-de-chocolate-1.jpg">
+                    <div class="imagem-card"><img src="Jeovanice/Imagens/Cópia de Design sem nome (2).png">
                     </div>
                     <div class="conteudo-card">
                         <h2>Receitas<div class="info"><span>Popular 🎂</span></h2>
@@ -790,13 +829,34 @@
                     <option value="politica">Política</option>
                 </select>
             </div>
-            <small style="color: #a3a0a0;">Ao continuar, você concorda em receber comunicações da Revista Conectar. Você
+            <small style="color: #a3a0a0;">Ao continuar, você concorda em receber comunicações da Revista Conecta. Você
                 pode cancelar a
                 qualquer momento.</small>
             <button class="botao">Finalizar assinatura</button>
         </form>
     </section>
 </body>
+<footer>
+    <p>© Copyright 2000-2025 Revista Conecta Comunicação e Participações S.A</p>
+    <p>CNPJ: 03.193.191/0005-77</p>
+</footer>
+<script>
+    function scrollToTop() {
+        window.scrollTo({
+            top: 0, 
+            behavior: 'smooth' 
+        });
+    }
+    const backToTopBtn = document.getElementById("backToTopBtn");
+    window.onscroll = function() {
+        if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+            backToTopBtn.style.display = "flex";
+        } else {
+            backToTopBtn.style.display = "none";
+        }
+    };
+backToTopBtn.style.display = "none"; 
+</script>
 <script>
     const botao = document.getElementById("modo-escuro")
 

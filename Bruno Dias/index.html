@@ -3,36 +3,30 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Blog Games – sua fonte de notícias e reviews do mundo PlayStation, Xbox e Nintendo. Fique por dentro das novidades do universo gamer com conteúdo atualizado e feito para apaixonados por jogos.">
-    <title>Visão Gamer | Notícias e Análises</title>
-    
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <meta name="description" content="Sua fonte de notícias e reviews do mundo PlayStation, Xbox e Nintendo. Fique por dentro das novidades do universo gamer com conteúdo atualizado e feito para apaixonados por jogos.">
+    <title>Games | Notícias e Análises</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700&family=Roboto:wght@300;400;500&display=swap"rel="stylesheet">
     
     <style>
-        /* 1. ESTILOS BASE */
         body {
-            color: #333;
-            font-family: 'Roboto', sans-serif;
+            color: #1C435A;
+            font-family: poppins;
             font-size: 1.1rem;
             text-align: center;
-            /* Corrigido: Garante que o fundo seja visível, mas com uma camada clara por cima */
-            background-image: linear-gradient(rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.8)), url(Imagens/Cópia\ de\ Design\ sem\ nome\ \(7\).png);
-            background-size: 60rem;
+            background-image: linear-gradient(rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.4)), url(Imagens/fieldset\ \(11\).png);
+            background-size: 95rem;
             background-repeat: no-repeat;
             background-attachment: fixed;
-            background-position: center center;
             margin: 0;
             padding: 0;
         }
         
-        /* 2. HEADER E NAVEGAÇÃO */
         header {
             position: sticky; 
             top: 0; 
             z-index: 100; 
             background-color: #f0f0f0;
-            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
         }
         
         .galeria {
@@ -41,7 +35,7 @@
             align-items: center;
             padding: 15px 40px;
             max-width: 1400px;
-            margin: 0 auto;
+            margin: 0;
         }
         
         .icones-centrais {
@@ -52,15 +46,20 @@
         }
 
         .logo-esquerda, .icones-centrais img {
-            width: 4rem; 
+            width: 3rem; 
             height: auto;
             display: block;
         }
 
-        /* 3. TÍTULOS */
+        .logo-esquerda {
+            width: 4.5rem;
+            margin: 0;
+            padding: 0;
+        }
+
         h1, h2, h3, h4, h5 {
-            font-family: 'Montserrat', sans-serif;
-            color: #333;
+            font-family: Poppins;
+            color: #1C435A;
             margin-top: 0.5em; 
             margin-bottom: 0.5em; 
             font-size: 1.5rem;
@@ -73,14 +72,10 @@
             padding-top: 40px; 
         }
 
-        /* 4. ESTILOS DO CARTÃO DE NOTÍCIA (AUMENTANDO A TRANSPARÊNCIA) */
         .noticia-card {
             max-width: 700px;
             margin: 40px auto;
-            
-            /* Fundo branco com 50% de opacidade - MUITO TRANSPARENTE */
             background-color: rgba(255, 255, 255, 0.5); 
-            
             border-radius: 12px; 
             padding: 30px; 
             box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
@@ -92,11 +87,9 @@
         .noticia-card:hover {
             transform: translateY(-5px); 
             box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
-            /* Aumenta a opacidade no hover para 80% para melhorar a leitura */
             background-color: rgba(255, 255, 255, 0.8); 
         }
 
-        /* 5. ESTILOS INTERNOS DO CARTÃO */
         section {
             padding: 0;
             margin: 0 auto;
@@ -104,14 +97,14 @@
 
         .imagem-noticia {
             display: block; 
-            max-width: 70%;
+            max-width: 100%;
             height: auto;
-            margin: 20px auto 20px auto;
+            margin: auto;
             border-radius: 8px;
         }
         
         .noticia-card h4 {
-            color: #333;
+            color: #1C435A;
             text-align: center;
             margin-bottom: 20px;
         }
@@ -121,15 +114,18 @@
             margin-bottom: 1em; 
             text-align: justify;
             padding: 0 10px;
-            color: #333;
+            color: #1C435A;
         }
         
         .noticia-card ul {
             list-style-position: inside;
             padding-left: 10px;
         }
+
+        .noticia-card a {
+            content: 200px;
+        }
         
-        /* 6. OUTROS ESTILOS */
         .conteudo-principal iframe {
             display: block;
             margin: 20px auto;
@@ -140,7 +136,7 @@
             position: fixed; 
             bottom: 30px; 
             right: 30px;
-            background-color: black;
+            background-color: #f0f0f0;
             color: white; 
             border: none;
             width: 50px;
@@ -150,7 +146,7 @@
             justify-content: center;
             align-items: center;
             text-decoration: none; 
-            font-size: 1.5rem;
+            font-size: 1.5rem; 
             cursor: pointer;
             transition: background-color 0.3s, transform 0.3s;
             z-index: 1000; 
@@ -158,14 +154,20 @@
         }
 
         #backToTopBtn:hover {
-            background-color: #333;
+            background-color: #f0f0f0;
             transform: translateY(-3px);
             box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
         }
 
+        .icone-btn-imagem {
+            width: 80%;
+            height: 100%;
+            object-fit: contain;
+        }
+
         footer {
             background-color: #f0f0f0; 
-            color: #333; 
+            color: #1C435A; 
             padding: 30px; 
             text-align: center;
             margin-top: 50px;
@@ -176,7 +178,7 @@
 <body>
     <header>
         <nav class="galeria">
-            <img class="logo-esquerda" src="Imagens/Cópia de Design sem nome (7).png" alt="Logo RC">
+            <a href="../paginaInicial.html"><img class="logo-esquerda" src="Imagens/Cópia de Design sem nome (9).png" alt="Logo RC"></a>
             <div class="icones-centrais">
                 <a href="Playstation/pagina.html"><img src="../Bruno Dias/Imagens/Logo Playstation Preta.png" alt="Logo Playstation"></a>
                 <a href="Xbox/pagina.html"><img src="Imagens/Logo Xbox2.png" alt="Logo Xbox"></a>
@@ -187,23 +189,21 @@
     
     <main>
         <section>
-            <a id="backToTopBtn" href="javascript:void(0);" onclick="scrollToTop()"><i class="fas fa-gamepad"></i></a>
-            
+            <a id="backToTopBtn" href="javascript:void(0);" onclick="scrollToTop()">
+            <img src="/Trabalho-Desenvolvimento-WEB/Jeovanice/Imagens/Cópia de Design sem nome (7).png" alt="Ícone de Bolo" class="icone-btn-imagem"></a>
             <h3>NOVIDADES</h3>
-
             <a href="Playstation/pagina.html" style="text-decoration: none;">
                 <div class="noticia-card">
-                    <img src="Imagens/Img Play/catalogo play.png" alt="Catalogo Playstation" class="imagem-noticia">
+                    <img src="Imagens/Img Play/catalogo play.png" alt="Catalogo Playstation" class="imagem-noticia"></a>
                     <h4>Novidades do Catálogo de Jogos PlayStation Plus de novembro: Grand Theft Auto V, Pacific Drive, Still Wakes the Deep e muito mais</h4>
                     <p class="texto-descricao">Neste mês, mergulhe no submundo do crime da cidade de Los Santos em Grand Theft Auto V, passeie pelo surreal e selvagem Noroeste Pacífico em Pacific Drive ou lute pela sua sobrevivência em uma plataforma de petróleo instável em Still Wakes the Deep. Todos esses títulos e muitos outros estão disponíveis na seleção de novembro do Catálogo de Jogos PlayStation Plus*. Enquanto isso, Tomb Raider: Anniversary traz a aventura original de Lara para o PlayStation Plus Deluxe. Todos esses títulos estarão disponíveis para jogar em 18 de novembro.</p>
                 </div>
-            </a>
         </section>
 
         <section>
             <a href="Xbox/pagina.html" style="text-decoration: none;">
                 <div class="noticia-card">
-                    <img src="Imagens/Img Xbox/cod 7.png" alt="cod 7" class="imagem-noticia">
+                    <img src="Imagens/Img Xbox/cod 7.png" alt="cod 7" class="imagem-noticia"></a>
                     <h4>Call of Duty: Black Ops 7 – o que você precisa saber sobre a campanha cooperativa, endgame e mais</h4>
                     <ul style="margin: 0 auto;text-align: justify; padding: 0 30px;">
                         <li>Saiba mais sobre os eventos que antecedem a campanha cooperativa de Call of Duty: Black Ops 7;</li>
@@ -211,18 +211,16 @@
                         <li>Call of Duty: Black Ops 7 será lançado em 14 de novembro de 2025 para Xbox Series X|S, Xbox One, Xbox no PC, ROG Xbox Ally portátil, Cloud, Battle.net, Steam, PlayStation 5 e PlayStation 4. É um título Xbox Play Anywhere e estará disponível no primeiro dia com Game Pass Ultimate e PC Game Pass.</li>
                     </ul>
                 </div>
-            </a>
         </section>
         
         <section>
             <a href="Nintendo/pagina.html" style="text-decoration: none;">
                 <div class="noticia-card">
-                    <img src="Imagens/Img Nint/ilusion.png" alt="ilusion" class="imagem-noticia">
+                    <img src="Imagens/Img Nint/ilusion.png" alt="ilusion" class="imagem-noticia"></a>
                     <h4>Experimente o teste de jogo mais recente: Disney Illusion Island</h4>
                     <p>Jogue como Mickey e amigos!</p>
                     <p>Do dia 29 de outubro, às 14h, até o dia 5 de novembro, às 4h59 (horário de Brasília), os assinantes do Nintendo Switch Online* podem baixar e experimentar o jogo completo Disney Illusion Island sem custo adicional.</p>
                 </div>
-            </a>
         </section>
     </main>
     
