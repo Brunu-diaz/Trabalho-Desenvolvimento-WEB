@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700&family=Roboto:wght@300;400;500&display=swap"rel="stylesheet">
+    <title>Docinhos</title>
+        <style>
+        header {
+            position: sticky; 
+            top: 0; 
+            z-index: 100; 
+            background-color: #f0f0f0;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); 
+        }
+
+        body {
+            color: #1C435A;
+            font-family: Poppins;
+            font-size: 1.1rem;
+            text-align: center;
+            background-image: linear-gradient(rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.8)), url(/Trabalho-Desenvolvimento-WEB/Jeovanice/Imagens/Design\ sem\ nome\ \(31\).png);
+            background-size: 96rem;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-position: center center;
+            margin: 0;
+        }
+
+        .galeria {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 3px 40px;
+            max-width: 1400px;
+            margin: 0;
+        }
+
+        h1, h2, h3, h4, h5 {
+            font-family: Poppins;
+            color: #1C435A;
+            margin-top: 0.5em; 
+            margin-bottom: 0.5em; 
+            font-size: 1.5rem;
+        }
+        
+        .imagem-noticia {
+            width: 500px;
+            border-radius: 8px;
+        }
+
+        img {
+            width: 4.5rem;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            border-radius: 10px;
+        }
+
+        section p {
+            line-height: 1.6;
+            margin-bottom: 1em;
+            text-indent: 3rem;
+        }
+
+        section {
+            max-width: 800px;
+            margin: 40px auto; 
+            padding: 0 20px;
+            text-align: justify; 
+        }
+
+        #backToTopBtn {
+            position: fixed; 
+            bottom: 30px; 
+            right: 30px;
+            background-color: #f0f0f0;
+            color: white; 
+            border: none;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-decoration: none; 
+            font-size: 1.5rem; 
+            cursor: pointer;
+            transition: background-color 0.3s, transform 0.3s;
+            z-index: 1000; 
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        #backToTopBtn:hover {
+            background-color: #f0f0f0;
+            transform: translateY(-3px);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+        }
+
+        #backToTopBtn i {
+            line-height: 2;
+        }
+
+        .icone-btn-imagem {
+            width: 80%;
+            height: 100%;
+            object-fit: contain;
+        }
+
+        .titulo a{
+            text-decoration: none;
+            color: #1C435A;
+        }
+
+        .titulo {
+        margin-left: 30.3rem;
+        margin-right: 34.5rem;
+        margin-top: auto;
+        margin-bottom: auto;
+        font-size: 2rem;
+        font-weight: bolder;
+        text-decoration: none;
+        }
+
+        .subtitulo {
+            color: #1C435A;
+            font-family: Poppins;
+            font-size: 1.3rem;
+            text-align: center;
+            max-width: 800px;
+            margin: 40px auto; 
+            padding: 0 20px;
+        }
+
+        footer {
+            background-color: #f0f0f0; 
+            color: #1C435A; 
+            padding: 30px; 
+            text-align: center;
+            margin-top: 50px;
+            font-size: 0.8rem;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="galeria">
+            <a href="/Trabalho-Desenvolvimento-WEB/paginaInicial.html"><img src="/Trabalho-Desenvolvimento-WEB/Jeovanice/Imagens/Cópia de Design sem nome (7).png" alt="Logo Nintendo" class="nint"></a>
+            <p class="titulo"><a href="../index.html">Docinhos</a></p>
+        </nav>
+    </header>
+    <main>
+        <a id="backToTopBtn" href="javascript:void(0);" onclick="scrollToTop()">
+            <img src="/Trabalho-Desenvolvimento-WEB/Jeovanice/Imagens/Cópia de Design sem nome (7).png" alt="Ícone de Bolo" class="icone-btn-imagem"> 
+        </a>
+            <section>
+                <img src="../Imagens/Cópia de Design sem nome (12).png" alt="Ilusion" class="imagem-noticia" style="margin-left: 187px;">
+                <h4 style="margin-left: 233px;">Brigadeiro Crocante Ferrero Rocher</h4>
+                <ul style="text-align: left;text-indent: 0;">
+                    <p class="subtitulo">Ingredientes</p>
+                    <p>Brigadeiro de Avelã</p>
+                    <li>1 Lata de Leite Condensado (395g);</li>
+                    <li>1 Colher de sopa de Manteiga sem sal;</li>
+                    <li>3 Colheres de sopa de Chocolate em Pó (50% ou 70% cacau);</li>
+                    <li>2 Colheres de sopa de Pasta de Avelã (Nutella ou similar).</li>
+                    <p>Cobertura</p>
+                    <li>Avelãs ou Amendoins torrados e picados grosseiramente (cerca de 100g);</li>
+                    <li>1/2 Lata de Creme de Leite (sem soro);</li>
+                    <li>2 Colheres de sopa de Chocolate em Pó;</li>
+                    <li>1 Colher de chá de Manteiga.</li>
+                </ul>
+                <ol>
+                    <p class="subtitulo">Preparo do Brigadeiro</p>
+                    <li>Cozimento: Em uma panela, misture o leite condensado, a manteiga e o chocolate em pó. Leve ao fogo médio, mexendo sempre, até o ponto de brigadeiro de enrolar (quando a massa soltar do fundo da panela, cerca de 10-15 minutos);</li>
+                    <li>Aroma: Retire do fogo e acrescente a Pasta de Avelã (Nutella). Misture bem até incorporar e transfira para um prato untado com manteiga. Deixe esfriar completamente (idealmente por 4 a 6 horas);</li>
+                    <li>Montagem do Corpo: Unte levemente as mãos. Enrole pequenas porções da massa do brigadeiro (cerca de 20g cada);</li>
+                    <li>Crocância: Passe a bolinha de brigadeiro nas avelãs ou amendoins picados grosseiramente, cobrindo toda a superfície do doce. Coloque-os em forminhas de papel (aquelas brancas, como na imagem).</li>
+                </ol>
+                <ol>
+                    <p class="subtitulo">Preparo da Cobertura</p>
+                    <li>Ganache Rápida: Em uma panela pequena, misture o creme de leite, o chocolate em pó e a manteiga. Leve ao fogo baixo e mexa até a manteiga derreter e a mistura ficar homogênea e cremosa;</li>
+                    <li>Esfriamento: Deixe a cobertura amornar até atingir uma consistência que possa ser aplicada com bico de confeitar (deve estar mais densa que uma calda, mas mais mole que o brigadeiro de colher);</li>
+                    <li>Finalização: Use um saco de confeitar com um bico pitanga (ou estrela) para fazer uma roseta generosa no topo de cada docinho, como visto na imagem.</li>
+                </ol>
+            </section>
+    </main>
+    <footer>
+        <p>© Copyright 2000-2025 Revista Conecta Comunicação e Participações S.A</p>
+        <p>CNPJ: 03.193.191/0005-77</p>
+    </footer>
+                <script>
+            // Função para rolar a página para o topo suavemente
+            function scrollToTop() {
+            window.scrollTo({
+                top: 0, 
+                behavior: 'smooth' /* Faz a rolagem ser suave */
+            });
+            }
+            // Opcional: Mostrar/Esconder o botão apenas quando o usuário rolar
+            const backToTopBtn = document.getElementById("backToTopBtn");
+            window.onscroll = function() {
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                backToTopBtn.style.display = "block";
+            } else {
+                backToTopBtn.style.display = "none";
+            }
+            };
+            // Esconde o botão por padrão (melhore adicionando 'display: none;' ao CSS)
+            backToTopBtn.style.display = "none"; 
+            </script>
+</body>
+</html>

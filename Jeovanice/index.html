@@ -3,22 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Blog Games – sua fonte de notícias e reviews do mundo PlayStation, Xbox e Nintendo. Fique por dentro das novidades do universo gamer com conteúdo atualizado e feito para apaixonados por jogos.">
-    <title>Visão Gamer | Notícias e Análises</title>
-    
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    
+    <meta name="description" content="Bolos frescos e artesanais! Encontre o bolo perfeito para sua festa ou café. Entrega rápida e sabores incríveis. Peça agora!">
+    <title>Receitas</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700&family=Roboto:wght@300;400;500&display=swap"rel="stylesheet">
     <style>
-        /* 1. ESTILOS BASE */
         body {
-            color: #333;
-            font-family: 'Roboto', sans-serif;
+            color: #1C435A;
+            font-family: poppins;
             font-size: 1.1rem;
             text-align: center;
-            /* Corrigido: Garante que o fundo seja visível, mas com uma camada clara por cima */
-            background-image: linear-gradient(rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.8)), url(Imagens/Cópia\ de\ Design\ sem\ nome\ \(7\).png);
-            background-size: 60rem;
+            background-image: linear-gradient(rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.8)), url(Imagens/Design\ sem\ nome\ \(31\).png);
+            background-size: 96rem;
             background-repeat: no-repeat;
             background-attachment: fixed;
             background-position: center center;
@@ -26,13 +21,12 @@
             padding: 0;
         }
         
-        /* 2. HEADER E NAVEGAÇÃO */
         header {
             position: sticky; 
             top: 0; 
             z-index: 100; 
             background-color: #f0f0f0;
-            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
         }
         
         .galeria {
@@ -41,25 +35,55 @@
             align-items: center;
             padding: 15px 40px;
             max-width: 1400px;
-            margin: 0 auto;
+            margin: 0;
+        }
+
+        img {
+            width: 4.5rem;
+            display: block;
+            height: auto;
+            margin-left: auto;
+            margin-right: auto;
+            border-radius: 10px;
+        }
+
+        .titulo a{
+            text-decoration: none;
+            color: #1C435A;
+        }
+
+        .titulo {
+        margin-left: 30.3rem;
+        margin-right: 38.5rem;
+        margin-top: auto;
+        margin-bottom: auto;
+        font-size: 2rem;
+        font-weight: bolder;
+        text-decoration: none;
         }
         
-        .icone-central {
-            font-size: 3rem;
-            margin-right: 512px;
-            font-weight: bolder;
+        .icones-centrais {
+            display: flex;
+            justify-content: center;
+            gap: 3rem;
+            flex-grow: 1;
         }
 
         .logo-esquerda, .icones-centrais img {
-            width: 4rem; 
+            width: 3rem; 
             height: auto;
             display: block;
         }
 
-        /* 3. TÍTULOS */
+        .logo-esquerda {
+            width: 4.5rem;
+            margin: 0;
+            padding: 0;
+        }
+
         h1, h2, h3, h4, h5 {
-            font-family: 'Montserrat', sans-serif;
-            color: #333;
+            font-family: Poppins;
+            color: #1C435A;
             margin-top: 0.5em; 
             margin-bottom: 0.5em; 
             font-size: 1.5rem;
@@ -72,14 +96,10 @@
             padding-top: 40px; 
         }
 
-        /* 4. ESTILOS DO CARTÃO DE NOTÍCIA (AUMENTANDO A TRANSPARÊNCIA) */
         .noticia-card {
             max-width: 700px;
             margin: 40px auto;
-            
-            /* Fundo branco com 50% de opacidade - MUITO TRANSPARENTE */
             background-color: rgba(255, 255, 255, 0.5); 
-            
             border-radius: 12px; 
             padding: 30px; 
             box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
@@ -91,11 +111,9 @@
         .noticia-card:hover {
             transform: translateY(-5px); 
             box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
-            /* Aumenta a opacidade no hover para 80% para melhorar a leitura */
             background-color: rgba(255, 255, 255, 0.8); 
         }
 
-        /* 5. ESTILOS INTERNOS DO CARTÃO */
         section {
             padding: 0;
             margin: 0 auto;
@@ -104,31 +122,35 @@
         .imagem-noticia {
             display: block; 
             max-width: 70%;
-            height: auto;
+            width: 25rem;
             margin: 20px auto 20px auto;
             border-radius: 8px;
         }
         
         .noticia-card h4 {
-            color: #333;
+            color: #1C435A;
             text-align: center;
             margin-bottom: 20px;
         }
 
         .texto-descricao, .noticia-card p, .noticia-card ul {
             line-height: 1.6;
-            margin-bottom: 1em; 
+            margin-bottom: 1rem; 
             text-align: justify;
             padding: 0 10px;
-            color: #333;
+            color: #1C435A;
         }
         
         .noticia-card ul {
             list-style-position: inside;
             padding-left: 10px;
         }
+
+        .noticia-card a {
+            content: 700px;
+            text-decoration: none;
+        }
         
-        /* 6. OUTROS ESTILOS */
         .conteudo-principal iframe {
             display: block;
             margin: 20px auto;
@@ -139,7 +161,7 @@
             position: fixed; 
             bottom: 30px; 
             right: 30px;
-            background-color: black;
+            background-color: #f0f0f0;
             color: white; 
             border: none;
             width: 50px;
@@ -149,7 +171,7 @@
             justify-content: center;
             align-items: center;
             text-decoration: none; 
-            font-size: 1.5rem;
+            font-size: 1.5rem; 
             cursor: pointer;
             transition: background-color 0.3s, transform 0.3s;
             z-index: 1000; 
@@ -157,69 +179,123 @@
         }
 
         #backToTopBtn:hover {
-            background-color: #333;
+            background-color: #f0f0f0;
             transform: translateY(-3px);
             box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
         }
 
+        .icone-btn-imagem {
+            width: 80%;
+            height: 100%;
+            object-fit: contain;
+        }
+
         footer {
             background-color: #f0f0f0; 
-            color: #333; 
+            color: #1C435A; 
             padding: 30px; 
             text-align: center;
             margin-top: 50px;
             font-size: 0.8rem;
+        }
+
+        .menu a {
+            position: relative;
+            color: #163546;
+            font-weight: 600;
+            padding-bottom: 5px;
+        }
+
+        .menu a::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            height: 2px;
+            background: #1C435A;
+            transform: scaleX(0);
+            transform-origin: left;
+            transition: transform 0.3s ease;
+            opacity: 1;
+        }
+
+        .menu a:hover::after {
+            transform: scaleX(1);
+        }
+
+        .nav-bar {
+            background: #f0f0f0;
+            border: 1px solid transparent;
+            border-radius: 10px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            height: 60px;
+            padding: 0px 25px;
+            z-index: 999;
+        }
+
+        .menu {
+            display: flex;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            gap: 25px;
+            justify-content: center;
+            flex: 1;
+        }
+
+        .menu a {
+            color: #1C435A;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
         }
     </style>
 </head>
 <body>
     <header>
         <nav class="galeria">
-            <img class="logo-esquerda" src="Imagens/Cópia de Design sem nome (7).png" alt="Logo RC">
-            <div class="icone-central">
-                Receitas de Bolos
-            </div>
+            <a href="../paginaInicial.html"><img src="../Bruno Dias/Imagens/Cópia de Design sem nome (9).png"></a>
+            <ul class="menu">
+                <li><a href="Bolos/pagina.html">Bolos</a></li>
+                <li><a href="Cupcake/pagina.html">Cupcakes</a></li>
+                <li><a href="Docinhos/pagina.html">Docinhos</a></li>
+            </ul>
         </nav>
-    </header><br>
-    
+    </header>
     <main>
         <section>
-            <a id="backToTopBtn" href="javascript:void(0);" onclick="scrollToTop()"><i class="fas fa-gamepad"></i></a>
-            
+            <a id="backToTopBtn" href="javascript:void(0);" onclick="scrollToTop()">
+            <img src="/Trabalho-Desenvolvimento-WEB/Jeovanice/Imagens/Cópia de Design sem nome (7).png" alt="Ícone de Bolo" class="icone-btn-imagem"></a>
             <h3>Receitas em Destaque</h3>
-
-            <a href="Playstation/pagina.html" style="text-decoration: none;">
                 <div class="noticia-card">
-                    <img src="Imagens/Cópia de Design sem nome (2).png" alt="Catalogo Playstation" class="imagem-noticia">
-                    <h4>Novidades do Catálogo de Jogos PlayStation Plus de novembro: Grand Theft Auto V, Pacific Drive, Still Wakes the Deep e muito mais</h4>
-                    <p class="texto-descricao">Neste mês, mergulhe no submundo do crime da cidade de Los Santos em Grand Theft Auto V, passeie pelo surreal e selvagem Noroeste Pacífico em Pacific Drive ou lute pela sua sobrevivência em uma plataforma de petróleo instável em Still Wakes the Deep. Todos esses títulos e muitos outros estão disponíveis na seleção de novembro do Catálogo de Jogos PlayStation Plus*. Enquanto isso, Tomb Raider: Anniversary traz a aventura original de Lara para o PlayStation Plus Deluxe. Todos esses títulos estarão disponíveis para jogar em 18 de novembro.</p>
+                    <a href="Bolos/pagina.html">
+                        <img src="Imagens/Cópia de Design sem nome (2).png" alt="Bolo Choc" class="imagem-noticia">
+                        <h4>Bolo Chocolatudo</h4>
+                    </a>
+                    <p>O Bolo Chocolatudo é o carro-chefe da nossa linha, combinando o conforto do bolo caseiro com a sofisticação de uma sobremesa gourmet. Seu nome deriva do seu principal apelo visual: ao ser servido, a generosa e brilhante calda de brigadeiro escorre do centro, cobrindo o bolo de forma irresistível e espetacular.</p>
                 </div>
-            </a>
         </section>
-
         <section>
-            <a href="Xbox/pagina.html" style="text-decoration: none;">
+            <a href="Cupcake/pagina.html" style="text-decoration: none;">
                 <div class="noticia-card">
-                    <img src="Imagens/Img Xbox/cod 7.png" alt="cod 7" class="imagem-noticia">
-                    <h4>Call of Duty: Black Ops 7 – o que você precisa saber sobre a campanha cooperativa, endgame e mais</h4>
-                    <ul style="margin: 0 auto;text-align: justify; padding: 0 30px;">
-                        <li>Saiba mais sobre os eventos que antecedem a campanha cooperativa de Call of Duty: Black Ops 7;</li>
-                        <li>Descubra mais detalhes sobre o Endgame, que encarrega a JSOC de explorar Avalon, eliminar as fortalezas da Guild e monitorar zonas de exposição que estão liberando uma toxina misteriosa na cidade;</li>
-                        <li>Call of Duty: Black Ops 7 será lançado em 14 de novembro de 2025 para Xbox Series X|S, Xbox One, Xbox no PC, ROG Xbox Ally portátil, Cloud, Battle.net, Steam, PlayStation 5 e PlayStation 4. É um título Xbox Play Anywhere e estará disponível no primeiro dia com Game Pass Ultimate e PC Game Pass.</li>
-                    </ul>
+                    <img src="Imagens/Cópia de Design sem nome (11).png" alt="cod 7" class="imagem-noticia"></a>
+                    <h4>Cupcake de Baunilha e Morango</h4>
+                    <p>Uma mordida de verão! Nosso Cupcake Primavera é composto por uma massa de baunilha incrivelmente fofa e aerada. Coroado com um buttercream de cream cheese levemente ácido, que harmoniza perfeitamente com a doçura e o frescor do morango fresco.</p>
                 </div>
-            </a>
         </section>
-        
         <section>
-            <a href="Nintendo/pagina.html" style="text-decoration: none;">
+            <a href="Docinhos/pagina.html" style="text-decoration: none;">
                 <div class="noticia-card">
-                    <img src="Imagens/Img Nint/ilusion.png" alt="ilusion" class="imagem-noticia">
-                    <h4>Experimente o teste de jogo mais recente: Disney Illusion Island</h4>
-                    <p>Jogue como Mickey e amigos!</p>
-                    <p>Do dia 29 de outubro, às 14h, até o dia 5 de novembro, às 4h59 (horário de Brasília), os assinantes do Nintendo Switch Online* podem baixar e experimentar o jogo completo Disney Illusion Island sem custo adicional.</p>
+                    <img src="Imagens/Cópia de Design sem nome (12).png" alt="ilusion" class="imagem-noticia"></a>
+                    <h4>Brigadeiro Crocante de Ferrero Rocher</h4>
+                    <p>Um deleite que eleva o brigadeiro a um novo nível. Este doce é uma fusão perfeita de chocolate intenso e avelãs tostadas. O núcleo macio e aveludado é coberto por uma capa crocante de avelãs/amendoins, finalizado com uma elegante roseta de brigadeiro cremoso no topo.</p>
                 </div>
-            </a>
         </section>
     </main>
     
@@ -229,14 +305,12 @@
     </footer>
     
     <script>
-        // Função para rolar a página para o topo suavemente
         function scrollToTop() {
             window.scrollTo({
                 top: 0, 
                 behavior: 'smooth' 
             });
         }
-        // Lógica de Mostrar/Esconder o botão
         const backToTopBtn = document.getElementById("backToTopBtn");
         window.onscroll = function() {
             if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {

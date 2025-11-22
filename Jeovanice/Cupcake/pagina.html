@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700&family=Roboto:wght@300;400;500&display=swap"rel="stylesheet">
+    <title>Cupcake</title>
+        <style>
+        header {
+            position: sticky; 
+            top: 0; 
+            z-index: 100; 
+            background-color: #f0f0f0;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); 
+        }
+
+        body {
+            color: #1C435A;
+            font-family: Poppins;
+            font-size: 1.1rem;
+            text-align: center;
+            background-image: linear-gradient(rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.8)), url(/Trabalho-Desenvolvimento-WEB/Jeovanice/Imagens/Design\ sem\ nome\ \(31\).png);
+            background-size: 96rem;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-position: center center;
+            margin: 0;
+        }
+
+        .galeria {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 3px 40px;
+            max-width: 1400px;
+            margin: 0;
+        }
+
+        h1, h2, h3, h4, h5 {
+            font-family: Poppins;
+            color: #1C435A;
+            margin-top: 0.5em; 
+            margin-bottom: 0.5em; 
+            font-size: 1.5rem;
+        }
+        
+        .imagem-noticia {
+            width: 500px;
+            border-radius: 8px;
+        }
+
+        img {
+            width: 4.5rem;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            border-radius: 10px;
+        }
+
+        section p {
+            line-height: 1.6;
+            margin-bottom: 1em;
+            text-indent: 3rem;
+        }
+
+        section {
+            max-width: 800px;
+            margin: 40px auto; 
+            padding: 0 20px;
+            text-align: justify; 
+        }
+
+        #backToTopBtn {
+            position: fixed; 
+            bottom: 30px; 
+            right: 30px;
+            background-color: #f0f0f0;
+            color: white; 
+            border: none;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-decoration: none; 
+            font-size: 1.5rem; 
+            cursor: pointer;
+            transition: background-color 0.3s, transform 0.3s;
+            z-index: 1000; 
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        #backToTopBtn:hover {
+            background-color: #f0f0f0;
+            transform: translateY(-3px);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+        }
+
+        #backToTopBtn i {
+            line-height: 2;
+        }
+
+        .icone-btn-imagem {
+            width: 80%;
+            height: 100%;
+            object-fit: contain;
+        }
+
+        .titulo a{
+            text-decoration: none;
+            color: #1C435A;
+        }
+
+        .titulo {
+        margin-left: 30.3rem;
+        margin-right: 35.5rem;
+        margin-top: auto;
+        margin-bottom: auto;
+        font-size: 2rem;
+        font-weight: bolder;
+        text-decoration: none;
+        }
+
+        .subtitulo {
+            color: #1C435A;
+            font-family: Poppins;
+            font-size: 1.3rem;
+            text-align: center;
+            max-width: 800px;
+            margin: 40px auto; 
+            padding: 0 20px;
+        }
+
+        footer {
+            background-color: #f0f0f0; 
+            color: #1C435A; 
+            padding: 30px; 
+            text-align: center;
+            margin-top: 50px;
+            font-size: 0.8rem;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="galeria">
+            <a href="/Trabalho-Desenvolvimento-WEB/paginaInicial.html"><img src="/Trabalho-Desenvolvimento-WEB/Jeovanice/Imagens/Cópia de Design sem nome (7).png" alt="Logo Nintendo" class="nint"></a>
+            <p class="titulo"><a href="../index.html">Cupcake</a></p>
+        </nav>
+    </header>
+    <main>
+        <a id="backToTopBtn" href="javascript:void(0);" onclick="scrollToTop()">
+            <img src="/Trabalho-Desenvolvimento-WEB/Jeovanice/Imagens/Cópia de Design sem nome (7).png" alt="Ícone de Bolo" class="icone-btn-imagem"> 
+        </a>
+            <section>
+                <img src="../Imagens/Cópia de Design sem nome (11).png" alt="Ilusion" class="imagem-noticia" style="margin-left: 187px;">
+                <h4 style="margin-left: 233px;">Cupcake de Baunilha e Morango</h4>
+                <ul style="text-align: left;text-indent: 0;">
+                    <p class="subtitulo">Ingredientes</p>
+                    <p>Massa</p>
+                    <li>1 e 1/2 xícaras de Farinha de Trigo;</li>
+                    <li>1 e 1/2 colheres de chá de Fermento em Pó;</li>
+                    <li>1/4 colher de chá de Sal;</li>
+                    <li>1/2 xícara de Manteiga sem sal (temperatura ambiente);</li>
+                    <li>1 xícara de Açúcar refinado;</li>
+                    <li>2 Ovos grandes;</li>
+                    <li>1 colher de chá de Essência de Baunilha;</li>
+                    <li>1/2 xícara de Leite integral.</li>
+                    <p>Cobertura de Cream Cheese</p>
+                    <li>100g de Manteiga sem sal (temperatura ambiente);</li>
+                    <li>100g de Cream Cheese (gelado);</li>
+                    <li>3 xícaras de Açúcar de Confeiteiro (peneirado);</li>
+                    <li>1/2 colher de chá de Essência de Baunilha;</li>
+                    <li>Morangos frescos para decorar.</li>
+                </ul>
+                <ol>
+                    <p class="subtitulo">Preparo da Massa</p>
+                    <li>Pré-aqueça: Ligue o forno a 180°C. Forre uma forma de cupcake com forminhas de papel;</li>
+                    <li>Secos: Em uma tigela, misture a farinha, o fermento e o sal. Reserve</li>
+                    <li>Cremagem: Na batedeira, bata a manteiga e o açúcar até obter um creme claro e fofo (cerca de 3-4 minutos);</li>
+                    <li>Ovos/Baunilha: Adicione os ovos, um de cada vez, batendo bem após cada adição. Junte a essência de baunilha;</li>
+                    <li>Alternância: Reduza a velocidade. Adicione a mistura de secos em três partes, alternando com o leite (comece e termine com os secos). Bata apenas até incorporar;</li>
+                    <li>Asse: Distribua a massa nas forminhas, preenchendo 2/3 de cada uma. Asse por 18 a 22 minutos. Deixe esfriar completamente antes de decorar.</li>
+                </ol>
+                <ol>
+                    <p class="subtitulo">Preparo da Cobertura</p>
+                    <li>Bata: Na batedeira, bata a manteiga até ficar macia. Adicione o cream cheese (gelado) e bata em velocidade média até misturar;</li>
+                    <li>Açúcar: Acrescente o açúcar de confeiteiro peneirado, uma xícara por vez, batendo em velocidade baixa e depois alta;</li>
+                    <li>Baunilha: Junte a essência de baunilha e bata até o buttercream ficar leve e fofo.</li>
+                </ol>
+                <ol>
+                    <p class="subtitulo">Montagem</p>
+                    <li>Use um saco de confeitar e bico pitanga (ou estrela) para aplicar a cobertura sobre cada cupcake frio, como na imagem;</li>
+                    <li>Finalize com meio morango fresco no topo.</li>
+                </ol>
+            </section>
+    </main>
+    <footer>
+        <p>© Copyright 2000-2025 Revista Conecta Comunicação e Participações S.A</p>
+        <p>CNPJ: 03.193.191/0005-77</p>
+    </footer>
+                <script>
+            // Função para rolar a página para o topo suavemente
+            function scrollToTop() {
+            window.scrollTo({
+                top: 0, 
+                behavior: 'smooth' /* Faz a rolagem ser suave */
+            });
+            }
+            // Opcional: Mostrar/Esconder o botão apenas quando o usuário rolar
+            const backToTopBtn = document.getElementById("backToTopBtn");
+            window.onscroll = function() {
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                backToTopBtn.style.display = "block";
+            } else {
+                backToTopBtn.style.display = "none";
+            }
+            };
+            // Esconde o botão por padrão (melhore adicionando 'display: none;' ao CSS)
+            backToTopBtn.style.display = "none"; 
+            </script>
+</body>
+</html>

@@ -3,8 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700&family=Roboto:wght@300;400;500&display=swap"rel="stylesheet">
     <title>Xbox</title>
     <style>
         header {
@@ -12,34 +11,33 @@
             top: 0; 
             z-index: 100; 
             background-color: #f0f0f0;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
         }
+
         body {
-            color: #333;
-            font-family: 'Roboto', sans-serif;
+            color: #1C435A;
+            font-family: Poppins;
             font-size: 1.1rem;
-            /* CORREÇÃO: CENTRALIZA TODO O TEXTO DO BODY POR PADRÃO */
             text-align: center;
-            background-image: linear-gradient(rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.8)), url(../Imagens/Logo\ Xbox2.png);
-            background-size: 30rem;
+            background-image: linear-gradient(rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.4)), url(../Imagens/fieldset\ \(11\).png);
+            background-size: 95rem;
             background-repeat: no-repeat;
             background-attachment: fixed;
-            background-position: center center;
             margin: 0;
         }
 
         .galeria {
             display: flex;
-            justify-content: left;
-            gap: 7rem;
-            padding: 15px 0;
-            margin-bottom: 1.5rem;
-            margin-left: 30px;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 40px;
+            max-width: 1400px;
+            margin: 0;
         }
 
         h1, h2, h3, h4, h5 {
-            font-family: 'Montserrat', sans-serif;
-            color: #333;
+            font-family: Poppins;
+            color: #1C435A;
             margin-top: 0.5em; 
             margin-bottom: 0.5em; 
             font-size: 1.5rem;
@@ -51,8 +49,9 @@
         }
 
         img {
-            width: 5rem;
+            width: 4.5rem;
             display: block;
+            height: auto;
             margin-left: auto;
             margin-right: auto;
             border-radius: 10px;
@@ -74,8 +73,8 @@
         #backToTopBtn {
             position: fixed; 
             bottom: 30px; 
-            right: 30px;  
-            background-color: black;
+            right: 30px;
+            background-color: #f0f0f0;
             color: white; 
             border: none;
             width: 50px;
@@ -85,7 +84,7 @@
             justify-content: center;
             align-items: center;
             text-decoration: none; 
-            font-size: 1.5rem;
+            font-size: 1.5rem; 
             cursor: pointer;
             transition: background-color 0.3s, transform 0.3s;
             z-index: 1000; 
@@ -93,13 +92,15 @@
         }
 
         #backToTopBtn:hover {
-            background-color: #333;
+            background-color: #f0f0f0;
             transform: translateY(-3px);
             box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
         }
 
-        #backToTopBtn i {
-            line-height: 2;
+        .icone-btn-imagem {
+            width: 80%;
+            height: 100%;
+            object-fit: contain;
         }
 
         .titulo a{
@@ -109,17 +110,17 @@
 
         .titulo {
         margin-left: 30.3rem;
-        margin-right: auto;
+        margin-right: 40.7rem;
         margin-top: auto;
         margin-bottom: auto;
-        font-size: 3rem;
+        font-size: 2rem;
         font-weight: bolder;
         text-decoration: none;
         }
 
         footer {
             background-color: #f0f0f0; 
-            color: #333; 
+            color: #1C435A; 
             padding: 30px; 
             text-align: center;
             margin-top: 50px;
@@ -130,32 +131,13 @@
 <body>
     <header>
         <nav class="galeria">
-            <a href="../index.html"><img src="../Imagens/Logo Xbox2.png"></a>
+            <a href="/Trabalho-Desenvolvimento-WEB/paginaInicial.html"><img src="../Imagens/Cópia de Design sem nome (9).png"></a>
             <p class="titulo"><a href="../index.html">Xbox</a></p>
         </nav>
     </header>
     <main>
-        <a id="backToTopBtn" href="javascript:void(0);" onclick="scrollToTop()"><i class="fas fa-gamepad"></i></a>
-            <script>
-            // Função para rolar a página para o topo suavemente
-            function scrollToTop() {
-            window.scrollTo({
-                top: 0, 
-                behavior: 'smooth' /* Faz a rolagem ser suave */
-            });
-            }
-            // Opcional: Mostrar/Esconder o botão apenas quando o usuário rolar
-            const backToTopBtn = document.getElementById("backToTopBtn");
-            window.onscroll = function() {
-            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-                backToTopBtn.style.display = "block";
-            } else {
-                backToTopBtn.style.display = "none";
-            }
-            };
-            // Esconde o botão por padrão (melhore adicionando 'display: none;' ao CSS)
-            backToTopBtn.style.display = "none"; 
-            </script>
+        <a id="backToTopBtn" href="javascript:void(0);" onclick="scrollToTop()">
+            <img src="/Trabalho-Desenvolvimento-WEB/Jeovanice/Imagens/Cópia de Design sem nome (7).png" alt="Ícone de Bolo" class="icone-btn-imagem"></a>
         <section>
             <h4 style="text-align:center";>Call of Duty: Black Ops 7 – o que você precisa saber sobre a campanha cooperativa, endgame e mais</h4>
             <em>
@@ -200,5 +182,22 @@
         <p>© Copyright 2000-2025 Revista Conecta Comunicação e Participações S.A</p>
         <p>CNPJ: 03.193.191/0005-77</p>
     </footer>
+    <script>
+        function scrollToTop() {
+            window.scrollTo({
+                top: 0, 
+                behavior: 'smooth' 
+            });
+        }
+        const backToTopBtn = document.getElementById("backToTopBtn");
+        window.onscroll = function() {
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                backToTopBtn.style.display = "flex";
+            } else {
+                backToTopBtn.style.display = "none";
+            }
+        };
+        backToTopBtn.style.display = "none"; 
+    </script>
 </body>
 </html>

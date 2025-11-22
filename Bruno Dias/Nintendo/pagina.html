@@ -3,8 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700&family=Roboto:wght@300;400;500&display=swap"rel="stylesheet">
     <title>Nintendo</title>
         <style>
         header {
@@ -12,34 +11,33 @@
             top: 0; 
             z-index: 100; 
             background-color: #f0f0f0;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); 
         }
 
         body {
-            color: #333;
-            font-family: 'Roboto', sans-serif;
+            color: #1C435A;
+            font-family: Poppins;
             font-size: 1.1rem;
             text-align: center;
-            background-image: linear-gradient(rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.8)), url(../Imagens/Logo\ Nintendo.png);
-            background-size: 40rem;
+            background-image: linear-gradient(rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.4)), url(../Imagens/fieldset\ \(11\).png);
+            background-size: 96rem;
             background-repeat: no-repeat;
             background-attachment: fixed;
-            background-position: center center;
             margin: 0;
         }
 
         .galeria {
             display: flex;
-            justify-content: left;
-            gap: 7rem;
-            padding: 15px 0;
-            margin-bottom: 1.5rem;
-            margin-left: 30px;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 40px;
+            max-width: 1400px;
+            margin: 0;
         }
 
         h1, h2, h3, h4, h5 {
-            font-family: 'Montserrat', sans-serif;
-            color: #333;
+            font-family: Poppins;
+            color: #1C435A;
             margin-top: 0.5em; 
             margin-bottom: 0.5em; 
             font-size: 1.5rem;
@@ -51,8 +49,7 @@
         }
 
         img {
-            background-color: bl;
-            width: 5rem;
+            width: 4.5rem;
             display: block;
             margin-left: auto;
             margin-right: auto;
@@ -75,8 +72,8 @@
         #backToTopBtn {
             position: fixed; 
             bottom: 30px; 
-            right: 30px;  
-            background-color: black;
+            right: 30px;
+            background-color: #f0f0f0;
             color: white; 
             border: none;
             width: 50px;
@@ -86,7 +83,7 @@
             justify-content: center;
             align-items: center;
             text-decoration: none; 
-            font-size: 1.5rem;
+            font-size: 1.5rem; 
             cursor: pointer;
             transition: background-color 0.3s, transform 0.3s;
             z-index: 1000; 
@@ -94,13 +91,15 @@
         }
 
         #backToTopBtn:hover {
-            background-color: #333;
+            background-color: #f0f0f0;
             transform: translateY(-3px);
             box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
         }
 
-        #backToTopBtn i {
-            line-height: 2;
+        .icone-btn-imagem {
+            width: 80%;
+            height: 100%;
+            object-fit: contain;
         }
 
         .titulo a{
@@ -109,18 +108,18 @@
         }
 
         .titulo {
-        margin-left: 27.3rem;
-        margin-right: auto;
+        margin-left: 30.3rem;
+        margin-right: 38.2rem;
         margin-top: auto;
         margin-bottom: auto;
-        font-size: 3rem;
+        font-size: 2rem;
         font-weight: bolder;
         text-decoration: none;
         }
 
         footer {
             background-color: #f0f0f0; 
-            color: #333; 
+            color: #1C435A; 
             padding: 30px; 
             text-align: center;
             margin-top: 50px;
@@ -131,12 +130,28 @@
 <body>
     <header>
         <nav class="galeria">
-            <a href="../index.html"><img src="../Imagens/Logo Nintendo.png" alt="Logo Nintendo" class="nint"></a>
+            <a href="/Trabalho-Desenvolvimento-WEB/paginaInicial.html"><img src="../Imagens/Cópia de Design sem nome (9).png" alt="Logo Nintendo" class="nint"></a>
             <p class="titulo"><a href="../index.html">Nintendo</a></p>
         </nav>
     </header>
     <main>
-        <a id="backToTopBtn" href="javascript:void(0);" onclick="scrollToTop()"><i class="fas fa-gamepad"></i></a>
+        <a id="backToTopBtn" href="javascript:void(0);" onclick="scrollToTop()">
+            <img src="/Trabalho-Desenvolvimento-WEB/Jeovanice/Imagens/Cópia de Design sem nome (7).png" alt="Ícone de Bolo" class="icone-btn-imagem"></a>
+            <section>
+                <img src="../Imagens/Img Nint/ilusion.png" alt="Ilusion" class="imagem-noticia">
+                <h4 style="text-align:center;">Experimente o teste de jogo mais recente: Disney Illusion Island</h4>
+                <p style="text-align: left;text-indent: 0;">Jogue como Mickey e amigos!</p>
+                <p>Do dia 29 de outubro, às 14h, até o dia 5 de novembro, às 4h59 (horário de Brasília), os assinantes do <a style="color: red;" target="_blank" href="https://www.nintendo.com/pt-br/online/">Nintendo Switch Online</a> podem baixar e experimentar o jogo completo <a href="https://www.nintendo.com/pt-br/store/products/disney-illusion-island-switch/" target="_blank" style="color: red;">Disney Illusion Island</a> sem custo adicional.</p>
+                <h4 style="text-align:center;">Disney Illusion Island</h4>
+                <p>Mickey Mouse, Minnie Mouse, Donald Duck e Goofy embarcam em uma aventura para encontrar três livros místicos e salvar a misteriosa ilha de Monoth. Você encontrará aliados incomuns e inimigos perigosos enquanto joga sozinho ou com até três amigos como o Fab Four no modo cooperativo local. Trabalhem juntos enquanto correm, pulam, nadam e abrem caminho para a vitória!</p>
+                <p>Se você decidir comprar o jogo durante ou após o fim da promoção, poderá transferir seus dados salvos, então não precisará se preocupar em perder seu progresso.</p>
+                <p>Para saber mais sobre o jogo Disney Illusion Island para o console Nintendo Switch™, acesse a <a href="https://www.nintendo.com/pt-br/store/products/disney-illusion-island-switch/"target="_blank" style="color: red;">página oficial.</a></p>
+            </section>
+    </main>
+    <footer>
+        <p>© Copyright 2000-2025 Revista Conecta Comunicação e Participações S.A</p>
+        <p>CNPJ: 03.193.191/0005-77</p>
+    </footer>
             <script>
             // Função para rolar a página para o topo suavemente
             function scrollToTop() {
@@ -157,20 +172,5 @@
             // Esconde o botão por padrão (melhore adicionando 'display: none;' ao CSS)
             backToTopBtn.style.display = "none"; 
             </script>
-            <section>
-                <img src="../Imagens/Img Nint/ilusion.png" alt="Ilusion" class="imagem-noticia">
-                <h4 style="text-align:center;">Experimente o teste de jogo mais recente: Disney Illusion Island</h4>
-                <p style="text-align: left;text-indent: 0;">Jogue como Mickey e amigos!</p>
-                <p>Do dia 29 de outubro, às 14h, até o dia 5 de novembro, às 4h59 (horário de Brasília), os assinantes do <a style="color: red;" target="_blank" href="https://www.nintendo.com/pt-br/online/">Nintendo Switch Online</a> podem baixar e experimentar o jogo completo <a href="https://www.nintendo.com/pt-br/store/products/disney-illusion-island-switch/" target="_blank" style="color: red;">Disney Illusion Island</a> sem custo adicional.</p>
-                <h4 style="text-align:center;">Disney Illusion Island</h4>
-                <p>Mickey Mouse, Minnie Mouse, Donald Duck e Goofy embarcam em uma aventura para encontrar três livros místicos e salvar a misteriosa ilha de Monoth. Você encontrará aliados incomuns e inimigos perigosos enquanto joga sozinho ou com até três amigos como o Fab Four no modo cooperativo local. Trabalhem juntos enquanto correm, pulam, nadam e abrem caminho para a vitória!</p>
-                <p>Se você decidir comprar o jogo durante ou após o fim da promoção, poderá transferir seus dados salvos, então não precisará se preocupar em perder seu progresso.</p>
-                <p>Para saber mais sobre o jogo Disney Illusion Island para o console Nintendo Switch™, acesse a <a href="https://www.nintendo.com/pt-br/store/products/disney-illusion-island-switch/"target="_blank" style="color: red;">página oficial.</a></p>
-            </section>
-    </main>
-    <footer>
-        <p>© Copyright 2000-2025 Revista Conecta Comunicação e Participações S.A</p>
-        <p>CNPJ: 03.193.191/0005-77</p>
-    </footer>
 </body>
 </html>
