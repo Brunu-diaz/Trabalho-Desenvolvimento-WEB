@@ -38,6 +38,21 @@ header .subtitle {
   font-size: 1.2rem;
   margin: 1rem 0;
 }
+.site-header {
+  position: relative; /* permite posicionar elementos dentro */
+}
+
+.site-header .logo {
+  position: absolute;
+  top: 10px;   /* distância do topo */
+  left: 10px;  /* coloque RIGHT para ir pro canto oposto */
+  width: 90px; /* ajuste o tamanho */ /* opcional, estilo decorativo */
+  mix-blend-mode: multiply;
+  background: transparent !important;
+  mix-blend-mode: normal;
+  filter: drop-shadow(0 0 0 transparent);
+  filter: brightness(0) invert(1);
+}
 
 .cta {
   display: inline-block;
