@@ -68,24 +68,29 @@
 
         @keyframes deslizar {
 
-            0%,
-            30% {
+            0% {
                 transform: translateX(0);
             }
-
-            33%,
-            63% {
+            16%{
                 transform: translateX(-100%);
             }
-
-            66%,
-            96% {
+            32%{
                 transform: translateX(-200%);
             }
-
-            100% {
+            48%{
+                transform: translateX(-300%);
+            }
+            64%{
+                transform: translateX(-400%);
+            }
+            80%{
+                transform: translateX(-500%);
+            }
+            100%{
                 transform: translateX(0);
             }
+
+            
         }
 
         .nav-bar {
@@ -504,14 +509,16 @@
             cursor: pointer;
             display: flex;
             margin-top: 15px;
+            background: #163546;
+            color: white;
         }
 
         .botao:hover {
             transform: translateY(-2px);
         }
         .botao-escuro{
-            background: none;
-            border: none;
+            background: none !important;
+            border: none !important;
             cursor: pointer;
             font-size: 22px;
             padding: 0;
@@ -605,8 +612,8 @@
         body.dark small{
             color: #9ca3af !important;
         }
-        body.dark botao{
-            background: #1e40af;
+        body.dark .botao{
+            background: #5c6068;
         }
         body.dark .botao:hover{
             background: #1d4ed8;
@@ -617,6 +624,12 @@
         body.dark .lista span{
             background: #22c55e;
             color: #064e3b;
+        }
+        body.dark .footer{
+            background: #111215;
+        }
+        body.dark .footer p{
+            color:#5c6068 ;
         }
         #backToTopBtn {
             position: fixed; 
@@ -705,7 +718,7 @@
         </nav>
     </header>
     <a id="backToTopBtn" href="javascript:void(0);" onclick="scrollToTop()">
-            <img src="/Trabalho-Desenvolvimento-WEB/Jeovanice/Imagens/Cópia de Design sem nome (7).png" alt="Ícone de Bolo" class="icone-btn-imagem"></a>
+            <img src="/Jeovanice/Imagens/Cópia de Design sem nome (7).png" alt="Ícone de Bolo" class="icone-btn-imagem"></a>
     <section>
         <div class="carrossel">
             <div class="slides">
@@ -713,6 +726,9 @@
                 <img src="./imgs/esquadria5.jpg" alt="">
                 <img src="./imgs/hq720.jpg" alt="">
                 <img src="imgs/Design sem nome (31).png" alt="">
+                <img src="imgs/one piece.jpg" alt="">
+                <img src="imgs/Rock.png" alt="">
+                <img src="imgs/Bolo-tradicional-de-Chocolate-com-calda-de-chocolate-1.jpg" alt="">
 
             </div>
             <div class="card-span">
@@ -800,19 +816,19 @@
             </div>
             <div class="cards-unitarios">
                 <a href="#">
-                    <div class="imagem-card"><img src="imgs/basquete-betsul-brasileiros-nbalat-1024x683.jpg"> </div>
+                    <div class="imagem-card"><img src="imgs/Rock.png"> </div>
                     <div class="conteudo-card">
-                        <h2>Lorem Ipsum </h2>
-                        <p>s simply dummy text of the printing and typesetting industry.</p>
+                        <h2>Musica </h2>
+                        <p>Notícias frequentes a respeito sobre o mundo da musica.</p>
                     </div>
                 </a>
             </div>
             <div class="cards-unitarios">
                 <a href="#">
-                    <div class="imagem-card"><img src="imgs/basquete-betsul-brasileiros-nbalat-1024x683.jpg"> </div>
+                    <div class="imagem-card"><img src="imgs/one piece.jpg"> </div>
                     <div class="conteudo-card">
-                        <h2>Lorem Ipsum</h2>
-                        <p>s simply dummy text of the printing and typesetting industry.</p>
+                        <h2>Geek</h2>
+                        <p>As melhores notícias do mundo geek: HQs, Mangás, Games, Tecnologia e muito mais!</p>
                     </div>
                 </a>
             </div>
@@ -863,7 +879,7 @@
                     <option value="receitas">Receitas</option>
                     <option value="games">Games</option>
                     <option value="musica">Música</option>
-                    <option value="politica">Política</option>
+                    <option value="politica">Geek</option>
                 </select>
             </div>
             <small style="color: #a3a0a0;">Ao continuar, você concorda em receber comunicações da Revista Conecta. Você
@@ -873,7 +889,7 @@
         </form>
     </section>
 </body>
-<footer>
+<footer class="footer">
     <p>© Copyright 2000-2025 Revista Conecta Comunicação e Participações S.A</p>
     <p>CNPJ: 03.193.191/0005-77</p>
 </footer>
