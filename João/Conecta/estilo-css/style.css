@@ -1,15 +1,15 @@
 
 body {
     margin: 0;
-    font-family: Arial, sans-serif;
-    background-color: #f2eaea; /* Fundo escuro */
-    color: #0c0b0b; /* Texto claro */
+    font-family: Poppins;
+    background-color: linear-gradient(rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.4)); /* Fundo escuro */
+    color: #1C435A; /* Texto claro */
   
 }
 
 /* ESTILO DO CABEÇALHO (Ajustado para Flutuação) */
 .cabecalho {
-    background-color: #0e0e0e;
+    background-color: #f0f0f0;
     padding: 15px 30px;
     border-bottom: 3px solid #cc0000; /* Borda vermelha de destaque */
     overflow: hidden; /* Garante que os floats internos (logo e nav) sejam contidos */
@@ -19,7 +19,7 @@ body {
     font-size: 28px;
     font-weight: bold;
     color: #ff3333; 
-    float: left; 
+    float: left;
 }
 
 .cabecalho nav {
@@ -49,7 +49,7 @@ body {
 
     .imagem-destaque {
         width: 30%;
-        background-color: #333333; 
+        background-color: #f0f0f0; 
         height: 400px;
         margin-bottom: 20px;
     }
@@ -77,11 +77,11 @@ body {
 .barra-lateral {
     float: right;
     width: 25%;
-    background-color: #0e0e0e;
+    background-color: #f0f0f0;
     padding: 20px;
     border-radius: 4px;
     margin-top: 30px; 
-    box-sizing: border-box; 
+    box-sizing: border-box;
 }
 
 .barra-lateral h3 {
@@ -106,8 +106,10 @@ a:hover {
 
 /* ESTILO PARA OS ÍCONES DA GUITARRA */
 .icone-logo {
-    height: 35px;
+    height: 45px;
     margin-right: 10px;
+    background-color: #f0f0f0;
+    border-radius: 8px;
 }
 
 

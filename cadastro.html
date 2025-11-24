@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Cadastro</title>
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700&family=Roboto:wght@300;400;500&display=swap"rel="stylesheet">
+        <link rel="shortcut icon" href="imgs/Favicom.png" type="image/x-icon">
+        <style>
+            header {
+                position: sticky; 
+                top: 0; 
+                z-index: 100; 
+                background-color: #f0f0f0;
+                box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+            }
+            
+            body {
+                font-family: Poppins;
+                background-image: linear-gradient(rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.1)), url(imgs/Cópia\ de\ Design\ sem\ nome\ \(9\).png);
+                background-size: 65rem;
+                background-repeat: no-repeat;
+                background-attachment: fixed;
+                background-position: center;
+                margin: 0;
+                padding: 0;
+            }
+
+            .galeria {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 12px 40px;
+            max-width: 1400px;
+            margin: 0;
+            }
+
+            .logo-esquerda {
+                width: 4.5rem;
+                margin: 0;
+                padding: 0;
+            }
+
+            .container {
+                width: 50%;
+                max-width: 1600px;
+                min-width: 80vh;
+                margin: auto;
+                padding: 20px;
+                align-items: center;
+                justify-content:center;
+            }
+
+            .cadastro-form {
+                margin: 0;
+                padding: 30px;
+                background-color:rgba(255,255,255, 0.85 );
+                border-radius: 10px;
+                text-align: center; 
+            }
+
+            .cadastro-form h2 {
+                margin-bottom: 20px;
+                font-size: 2.5rem;
+                color: #1C435A;
+            }
+
+            .cadastro-form input[type="text"],
+            .cadastro-form input[type="tel"],
+            .cadastro-form input[type="email"],
+            .cadastro-form input[type="password"] {
+                width:50%;
+                padding: 12px;
+                margin-bottom: 15px;
+                border: 3px solid #1C435A;
+                font-style: 1rem;
+                text-align: center;
+                font-size: 0.9rem;
+            }
+
+            .cadastro-form button {
+                padding: 12px;
+                background-color: #1C435A;
+                border: nome;
+                border-radius: 10px;
+                color: white;
+                cursor: pointer;
+                font-size: 1rem;
+            }
+
+            .cadastro-form button:hover {
+                background-color: #1C435A;;
+            }
+
+            fieldset {
+                border:4px solid #1C435A;
+                padding: 10px;
+                border-radius: 10px;
+            }
+
+            label {
+                margin-right: 9px;
+                font-size: 18px;
+                letter-spacing: -1px;
+                display: inline-block;
+                margin-bottom: 8px;
+                font-size: 1rem;
+                font-weight: bolder;
+                color: #1C435A;
+            }
+
+            #backToTopBtn {
+            position: fixed; 
+            bottom: 30px; 
+            right: 30px;
+            background-color: #f0f0f0;
+            color: white; 
+            border: none;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-decoration: none; 
+            font-size: 1.5rem; 
+            cursor: pointer;
+            transition: background-color 0.3s, transform 0.3s;
+            z-index: 1000; 
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            }
+
+            #backToTopBtn:hover {
+                background-color: #f0f0f0;
+                transform: translateY(-3px);
+                box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+            }
+
+            .icone-btn-imagem {
+            width: 80%;
+            height: 100%;
+            object-fit: contain;
+            }
+
+            footer {
+                background-color: #f0f0f0; 
+                color: #1C435A; 
+                padding: 30px; 
+                text-align: center;
+                margin-top: 50px;
+                font-size: 0.8rem;
+            }
+
+        </style>
+    </head>
+    <body>
+        <header>
+            <div class="galeria">
+                <a href="paginaInicial.html"><img class="logo-esquerda" src="imgs/Cópia de Design sem nome (9).png" alt="Logo RC"></a>
+            </div>
+        </header><br>
+        <main>
+            <a id="backToTopBtn" href="javascript:void(0);" onclick="scrollToTop()">
+            <img src="/Trabalho-Desenvolvimento-WEB/imgs/Cópia de Design sem nome (9).png" alt="Ícone de Bolo" class="icone-btn-imagem"></a>
+            <form method="post" action="cadastro.php" autocomplete="off">
+                <div class="container">
+                <div class="cadastro-form">
+                    <fieldset>
+                        <p><h2>Cadastro</h2></p>
+
+                        <label for="inome">Nome Completo:</label><br>
+                        <input type="text" name="nome" id="inome" placeholder="Digite seu nome completo"><br>
+  
+                        <label for="iemail">E-mail</label><br>
+                        <input type="email" name="email" id="iemail" placeholder="seuemail@exemplo.com"><br>
+
+                        <label for="itel">Telefone:</label><br>
+                        <input type="tel" pattern="^\(\d{2}\)\d{4,5}-\d{4}$" name="tel" id="itel" placeholder="(XX)XXXXX-XXXX"><br>
+
+                        <label for="isenha">Crie uma senha:</label><br>
+                        <input type="password" name="senha" id="isenha" placeholder="Digite sua senha" minlength="3" maxlength="7"><br>
+
+                        <label for="iconfirma_senha">Confirme sua senha:</label><br>
+                        <input type="password" id="iconfirma_senha" name="comfirma_senha" placeholder="Digite sua senha" required><br>
+
+                        <button type="submit">Cadastrar</button>
+                        <button type="reset">Limpar</button>
+                    </fieldset>
+                </div>
+                </div> 
+            </form>
+        </main>
+        <footer>
+            <p>© Copyright 2000-2025 Revista Conecta Comunicação e Participações S.A</p>
+            <p>CNPJ: 03.193.191/0005-77</p>
+        </footer>
+        <script>
+            function scrollToTop() {
+                window.scrollTo({
+                    top: 0, 
+                    behavior: 'smooth' 
+                });
+            }
+            const backToTopBtn = document.getElementById("backToTopBtn");
+            window.onscroll = function() {
+                if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                    backToTopBtn.style.display = "flex";
+                } else {
+                    backToTopBtn.style.display = "none";
+                }
+            };
+            backToTopBtn.style.display = "none"; 
+        </script>
+    </body>
+</html>
