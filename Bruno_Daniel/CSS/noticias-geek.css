@@ -1,0 +1,474 @@
+/* 
+    ============================================
+    GEEKNEWS - ESTILOS CSS
+    ============================================
+    Arquivo de estilos para o site GeekNews.
+    Tema: Dark Mode (Modo Escuro)
+    Fonte: Inter (Google Fonts)
+    ============================================
+*/
+
+/* 
+    ============================================
+    RESET BÁSICO
+    ============================================
+    Remove margens e paddings padrão de todos os elementos
+    e define box-sizing como border-box para facilitar o layout.
+*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* 
+    ============================================
+    ESTILOS GLOBAIS DO BODY
+    ============================================
+    Define a fonte profissional (Inter), cor do texto,
+    altura da linha e fundo escuro para o tema dark.
+*/
+body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    line-height: 1.6;
+    color: #e0e0e0;
+    background: #0f0f0f;
+    background-image: 
+        radial-gradient(at 0% 0%, rgba(102, 126, 234, 0.1) 0px, transparent 50%),
+        radial-gradient(at 100% 100%, rgba(118, 75, 162, 0.1) 0px, transparent 50%);
+    min-height: 100vh;
+}
+
+/* 
+    ============================================
+    HEADER FIXO
+    ============================================
+    Cabeçalho fixo no topo da página com gradiente escuro.
+    Permanece visível durante o scroll (z-index: 1000).
+*/
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+    color: white;
+    padding: 1rem 0;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Container do conteúdo do header */
+.header-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Logo do site */
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 1.8rem;
+    font-weight: 700;
+    letter-spacing: -0.5px;
+}
+
+.logo img {
+    height: 40px;
+    width: auto;
+    object-fit: contain;
+    border-radius: 4px;
+}
+
+/* Menu de navegação */
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+}
+
+nav a {
+    color: #e0e0e0;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 0.95rem;
+    transition: color 0.3s ease;
+    position: relative;
+}
+
+nav a:hover {
+    color: #667eea;
+}
+
+nav a::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: #667eea;
+    transition: width 0.3s ease;
+}
+
+nav a:hover::after {
+    width: 100%;
+}
+
+/* 
+    ============================================
+    HERO SECTION
+    ============================================
+    Seção de destaque com mensagem de boas-vindas.
+    Usa gradiente escuro com toques de cor.
+*/
+.hero {
+    margin-top: 80px;
+    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+    color: white;
+    padding: 4rem 20px;
+    text-align: center;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.hero h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    font-weight: 800;
+    letter-spacing: -1px;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
+}
+
+.hero p {
+    font-size: 1.2rem;
+    max-width: 600px;
+    margin: 0 auto;
+    font-weight: 400;
+    opacity: 0.9;
+}
+
+/* 
+    ============================================
+    CONTAINER PRINCIPAL
+    ============================================
+    Container que centraliza o conteúdo principal da página.
+*/
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem 20px;
+}
+
+/* 
+    ============================================
+    FILTROS DE CATEGORIA
+    ============================================
+    Botões que permitem filtrar as notícias por categoria.
+    Cada categoria tem sua cor específica mantida para diferenciação.
+*/
+.categories {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 2rem;
+    flex-wrap: wrap;
+}
+
+.category-btn {
+    padding: 0.6rem 1.5rem;
+    border: none;
+    border-radius: 25px;
+    font-weight: 600;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-family: 'Inter', sans-serif;
+    letter-spacing: 0.3px;
+}
+
+.category-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
+}
+
+/* Cores específicas para cada categoria */
+.category-hq {
+    background: #E63946;
+    color: white;
+}
+
+.category-manga {
+    background: #457B9D;
+    color: white;
+}
+
+.category-geek {
+    background: #2A9D8F;
+    color: white;
+}
+
+/* Estado ativo do botão */
+.category-btn.active {
+    transform: scale(1.05);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.5);
+    border: 2px solid rgba(255, 255, 255, 0.3);
+}
+
+/* 
+    ============================================
+    GRID DE NOTÍCIAS
+    ============================================
+    Grid responsivo que exibe os cards de notícias.
+    Layout adaptativo: 3 colunas (desktop) -> 1 coluna (mobile).
+*/
+.news-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+/* 
+    ============================================
+    CARDS DE NOTÍCIAS
+    ============================================
+    Cards individuais que exibem cada notícia.
+    Tema escuro com hover effect para melhor interatividade.
+*/
+.news-card {
+    background: #1a1a1a;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+    transition: all 0.3s ease;
+    cursor: pointer;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.news-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.6);
+    border-color: rgba(102, 126, 234, 0.3);
+}
+
+/* Container da imagem da notícia */
+.news-image {
+    width: 100%;
+    height: 200px;
+    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 0.9rem;
+    position: relative;
+    overflow: hidden;
+}
+
+.news-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.news-card:hover .news-image img {
+    transform: scale(1.05);
+}
+
+/* Conteúdo do card (categoria, título, resumo, data) */
+.news-content {
+    padding: 1.5rem;
+}
+
+/* Badge de categoria */
+.news-category {
+    display: inline-block;
+    padding: 0.4rem 0.9rem;
+    border-radius: 15px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    margin-bottom: 0.8rem;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+}
+
+.news-category.hq {
+    background: #E63946;
+    color: white;
+}
+
+.news-category.manga {
+    background: #457B9D;
+    color: white;
+}
+
+.news-category.geek {
+    background: #2A9D8F;
+    color: white;
+}
+
+/* Título da notícia */
+.news-title {
+    font-size: 1.3rem;
+    font-weight: 700;
+    margin-bottom: 0.8rem;
+    color: #ffffff;
+    line-height: 1.4;
+    letter-spacing: -0.3px;
+}
+
+/* Resumo/Excerpt da notícia */
+.news-excerpt {
+    color: #b0b0b0;
+    margin-bottom: 1rem;
+    line-height: 1.7;
+    font-weight: 400;
+}
+
+/* Data da notícia */
+.news-date {
+    font-size: 0.85rem;
+    color: #888;
+    font-weight: 500;
+}
+
+/* 
+    ============================================
+    FOOTER
+    ============================================
+    Rodapé do site com informações e links.
+    Tema escuro consistente com o restante do site.
+*/
+footer {
+    background: #0a0a0a;
+    color: white;
+    padding: 3rem 20px 1rem;
+    margin-top: 4rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 2rem;
+}
+
+.footer-section h3 {
+    margin-bottom: 1rem;
+    font-weight: 700;
+    font-size: 1.1rem;
+    color: #ffffff;
+    letter-spacing: -0.3px;
+}
+
+.footer-section ul {
+    list-style: none;
+}
+
+.footer-section ul li {
+    margin-bottom: 0.5rem;
+}
+
+.footer-section a {
+    color: #b0b0b0;
+    text-decoration: none;
+    transition: color 0.3s ease;
+    font-weight: 400;
+}
+
+.footer-section a:hover {
+    color: #667eea;
+}
+
+/* Links de redes sociais */
+.social-links {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.social-links a {
+    width: 40px;
+    height: 40px;
+    background: #1a1a1a;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.social-links a:hover {
+    background: #667eea;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(102, 126, 234, 0.3);
+}
+
+/* Rodapé inferior (copyright) */
+.footer-bottom {
+    text-align: center;
+    margin-top: 2rem;
+    padding-top: 2rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    color: #888;
+    font-weight: 400;
+}
+
+.footer-bottom strong {
+    color: #667eea;
+    font-weight: 600;
+}
+
+/* 
+    ============================================
+    MEDIA QUERIES - RESPONSIVIDADE
+    ============================================
+    Ajustes para diferentes tamanhos de tela.
+    Mobile-first approach.
+*/
+@media (max-width: 768px) {
+    /* Ajustes do Hero para mobile */
+    .hero h1 {
+        font-size: 2rem;
+    }
+
+    .hero p {
+        font-size: 1rem;
+    }
+
+    /* Menu de navegação em coluna para mobile */
+    nav ul {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    /* Grid de notícias em coluna única para mobile */
+    .news-grid {
+        grid-template-columns: 1fr;
+    }
+
+    /* Header em coluna para mobile */
+    .header-content {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    /* Ajustes de padding para mobile */
+    .container {
+        padding: 1.5rem 15px;
+    }
+}
+
+/* 
+    ============================================
+    FIM DO ARQUIVO CSS
+    ============================================
+*/

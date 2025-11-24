@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <!-- Meta Tags -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="GeekNews - Portal de notícias sobre HQs, Mangás, Games e Tecnologia">
+    
+    <!-- Título da Página -->
+    <title>GeekNews | Notícias do Mundo Geek</title>
+    
+    <!-- Google Fonts - Fonte Profissional (Inter) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Estilos CSS -->
+    <link rel="stylesheet" href="css/noticias-geek.css">
+</head>
+<body>
+    <!-- 
+        ============================================
+        HEADER FIXO
+        ============================================
+        Cabeçalho fixo no topo da página com logo e menu de navegação.
+        Permanece visível durante o scroll da página.
+    -->
+    <header>
+        <div class="header-content">
+            <!-- Logo do Site -->
+            <div class="logo">
+                <a href="/paginaInicial.html"><img src="imagem/conecta.jpg" alt="GeekNews Logo"></a>
+                <span>🎮 GeekNews</span>
+            </div>
+            
+            <!-- Menu de Navegação -->
+            <nav>
+                <ul>
+                    <li><a href="#inicio">Início</a></li>
+                    <li><a href="#noticias">Notícias</a></li>
+                    <li><a href="#categorias">Categorias</a></li>
+                    <li><a href="#sobre">Sobre</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- 
+        ============================================
+        HERO SECTION
+        ============================================
+        Seção de destaque com mensagem de boas-vindas.
+        Primeira seção visível após o header.
+    -->
+    <section class="hero" id="inicio">
+        <h1>Bem-vindo ao GeekNews! 🚀</h1>
+        <p>As melhores notícias do mundo geek: HQs, Mangás, Games, Tecnologia e muito mais!</p>
+    </section>
+
+    <!-- 
+        ============================================
+        CONTAINER PRINCIPAL
+        ============================================
+        Container que agrupa os filtros de categoria e o grid de notícias.
+    -->
+    <div class="container">
+        <!-- 
+            Filtros por Categoria
+            Botões que permitem filtrar as notícias por categoria (Todas, HQs, Mangás, Mundo Geek).
+            A função filterNews() é chamada ao clicar em cada botão.
+        -->
+        <div class="categories" id="categorias">
+            <button class="category-btn category-hq active" onclick="filterNews('all')">Todas</button>
+            <button class="category-btn category-hq" onclick="filterNews('hq')">HQs</button>
+            <button class="category-btn category-manga" onclick="filterNews('manga')">Mangás</button>
+            <button class="category-btn category-geek" onclick="filterNews('geek')">Mundo Geek</button>
+        </div>
+
+        <!-- 
+            ============================================
+            GRID DE NOTÍCIAS
+            ============================================
+            Grid responsivo que exibe os cards de notícias.
+            Cada card contém: imagem, categoria, título, resumo e data.
+            O atributo data-category é usado para filtrar as notícias.
+        -->
+        <div class="news-grid" id="noticias">
+            <!-- 
+                Notícia 1 - HQ (Histórias em Quadrinhos)
+                data-category="hq" define a categoria para filtragem
+            -->
+            <article class="news-card" data-category="hq">
+                <div class="news-image" style="background: linear-gradient(135deg, #E63946 0%, #C1121F 100%);">
+                    
+                    <!-- Exemplo: <img src="imagem/batman-hq.jpg" alt="Nova série do Batman"> -->
+                <img src="imagem/batman.webp" alt="Nova série do Batman">
+                </div>
+                <div class="news-content">
+                    <span class="news-category hq">HQs</span>
+                    <h2 class="news-title">Nova série do Batman chega em 2025</h2>
+                    <p class="news-excerpt">
+                        DC Comics anuncia nova série do Cavaleiro das Trevas com arte revolucionária 
+                        e uma história que promete chocar os fãs.
+                    </p>
+                    <span class="news-date">15 de Janeiro, 2025</span>
+                </div>
+            </article>
+
+            <!-- 
+                Notícia 2 - Mangá
+                data-category="manga" define a categoria para filtragem
+            -->
+            <article class="news-card" data-category="manga">
+                <div class="news-image" style="background: linear-gradient(135deg, #457B9D 0%, #1D3557 100%);">
+                    <img src="imagem/one.png" alt="One Piece">
+                </div>
+                <div class="news-content">
+                    <span class="news-category manga">Mangás</span>
+                    <h2 class="news-title">One Piece atinge novo recorde de vendas</h2>
+                    <p class="news-excerpt">
+                        A obra de Eiichiro Oda continua quebrando recordes, alcançando mais de 
+                        500 milhões de cópias vendidas mundialmente.
+                    </p>
+                    <span class="news-date">14 de Janeiro, 2025</span>
+                </div>
+            </article>
+
+            <!-- 
+                Notícia 3 - Mundo Geek
+                data-category="geek" define a categoria para filtragem
+            -->
+            <article class="news-card" data-category="geek">
+                <div class="news-image" style="background: linear-gradient(135deg, #2A9D8F 0%, #1A6B5F 100%);">
+                    <img src="imagem/ps6.webp" alt="PlayStation 6">
+                </div>
+                <div class="news-content">
+                    <span class="news-category geek">Mundo Geek</span>
+                    <h2 class="news-title">PlayStation 6: Primeiros detalhes vazam</h2>
+                    <p class="news-excerpt">
+                        Rumores sobre o próximo console da Sony começam a circular, com 
+                        especificações técnicas impressionantes.
+                    </p>
+                    <span class="news-date">13 de Janeiro, 2025</span>
+                </div>
+            </article>
+
+            <!-- Notícia 4 - HQ -->
+            <article class="news-card" data-category="hq">
+                <div class="news-image" style="background: linear-gradient(135deg, #E63946 0%, #C1121F 100%);">
+                    
+                    <img src="imagem/angolajanga.webp" alt="Angola Janga"> 
+                </div>
+                <div class="news-content">
+                    <span class="news-category hq">HQs</span>
+                    <h2 class="news-title">Quadrinho brasileiro ganha prêmio internacional</h2>
+                    <p class="news-excerpt">
+                        Obra nacional "Angola Janga" de Marcelo D'Salete recebe reconhecimento 
+                        em festival de quadrinhos na Europa.
+                    </p>
+                    <span class="news-date">12 de Janeiro, 2025</span>
+                </div>
+            </article>
+
+            <!-- Notícia 5 - Mangá -->
+            <article class="news-card" data-category="manga">
+                <div class="news-image" style="background: linear-gradient(135deg, #457B9D 0%, #1D3557 100%);">
+                    <img src="imagem/Demon-Slayer-capa-890x606.webp" alt="Demon Slayer"> 
+                </div>
+                <div class="news-content">
+                    <span class="news-category manga">Mangás</span>
+                    <h2 class="news-title">Novo anime de Demon Slayer confirmado</h2>
+                    <p class="news-excerpt">
+                        Estúdio Ufotable anuncia nova temporada da série que conquistou 
+                        milhões de fãs ao redor do mundo.
+                    </p>
+                    <span class="news-date">11 de Janeiro, 2025</span>
+                </div>
+            </article>
+
+            <!-- Notícia 6 - Mundo Geek -->
+            <article class="news-card" data-category="geek">
+                <div class="news-image" style="background: linear-gradient(135deg, #2A9D8F 0%, #1A6B5F 100%);">
+                   
+                    <img src="imagem/ia.webp" alt="IA e Arte Digital">
+                </div>
+                <div class="news-content">
+                    <span class="news-category geek">Mundo Geek</span>
+                    <h2 class="news-title">IA revoluciona criação de arte digital</h2>
+                    <p class="news-excerpt">
+                        Novas ferramentas de inteligência artificial estão transformando 
+                        a forma como artistas criam ilustrações e designs.
+                    </p>
+                    <span class="news-date">10 de Janeiro, 2025</span>
+                </div>
+            </article>
+
+            <!-- Notícia 7 - HQ -->
+            <article class="news-card" data-category="hq">
+                <div class="news-image" style="background: linear-gradient(135deg, #E63946 0%, #C1121F 100%);">
+                    <!-- IMAGEM DA NOTÍCIA: Coloque aqui a imagem da notícia -->
+                    <!-- Exemplo: <img src="imagem/vingadores-xmen.jpg" alt="Vingadores vs X-Men"> -->
+                   <img src="imagem/marvel.webp" alt="Vingadores vs X-Men"> 
+                </div>
+                <div class="news-content">
+                    <span class="news-category hq">HQs</span>
+                    <h2 class="news-title">Crossover épico: Vingadores vs X-Men</h2>
+                    <p class="news-excerpt">
+                        Marvel anuncia evento que reunirá os maiores heróis em uma batalha 
+                        que mudará o universo Marvel para sempre.
+                    </p>
+                    <span class="news-date">9 de Janeiro, 2025</span>
+                </div>
+            </article>
+
+            <!-- Notícia 8 - Mangá -->
+            <article class="news-card" data-category="manga">
+                <div class="news-image" style="background: linear-gradient(135deg, #457B9D 0%, #1D3557 100%);">
+                   
+                    <img src="imagem/aot.webp" alt="Attack on Titan"> 
+                </div>
+                <div class="news-content">
+                    <span class="news-category manga">Mangás</span>
+                    <h2 class="news-title">Attack on Titan: Final definitivo chega</h2>
+                    <p class="news-excerpt">
+                        Após anos de espera, os fãs finalmente terão o desfecho completo 
+                        da saga de Eren e os Titãs.
+                    </p>
+                    <span class="news-date">8 de Janeiro, 2025</span>
+                </div>
+            </article>
+
+            <!-- Notícia 9 - Mundo Geek -->
+            <article class="news-card" data-category="geek">
+                <div class="news-image" style="background: linear-gradient(135deg, #2A9D8F 0%, #1A6B5F 100%);">
+                   
+                    <img src="imagem/CCXP25-800x500.webp" alt="CCXP 2025"> 
+                </div>
+                <div class="news-content">
+                    <span class="news-category geek">Mundo Geek</span>
+                    <h2 class="news-title">CCXP 2025: Maior evento geek do Brasil</h2>
+                    <p class="news-excerpt">
+                        Comic Con Experience anuncia atrações incríveis para a edição deste ano, 
+                        incluindo estrelas internacionais e lançamentos exclusivos.
+                    </p>
+                    <span class="news-date">7 de Janeiro, 2025</span>
+                </div>
+            </article>
+        </div>
+    </div>
+
+    <!-- 
+        ============================================
+        FOOTER
+        ============================================
+        Rodapé do site com informações sobre o GeekNews,
+        links rápidos, categorias e redes sociais.
+    -->
+    <footer id="sobre">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Sobre o GeekNews</h3>
+                <p>Seu portal de notícias sobre o mundo geek: HQs, mangás, games, tecnologia e muito mais!</p>
+            </div>
+            
+            <div class="footer-section">
+                <h3>Links Rápidos</h3>
+                <ul>
+                    <li><a href="#inicio">Início</a></li>
+                    <li><a href="#noticias">Notícias</a></li>
+                    <li><a href="#categorias">Categorias</a></li>
+                    <li><a href="#sobre">Sobre</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-section">
+                <h3>Categorias</h3>
+                <ul>
+                    <li><a href="#hq">Histórias em Quadrinhos</a></li>
+                    <li><a href="#manga">Mangás</a></li>
+                    <li><a href="#geek">Mundo Geek</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-section">
+                <h3>Redes Sociais</h3>
+                <div class="social-links">
+                    <a href="#" aria-label="Facebook">📘</a>
+                    <a href="#" aria-label="Twitter">🐦</a>
+                    <a href="#" aria-label="Instagram">📷</a>
+                    <a href="#" aria-label="YouTube">▶️</a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <p>&copy; 2025 GeekNews. Todos os direitos reservados.</p>
+            <p>Desenvolvido por <strong>Bruno Daniel R1</strong></p>
+        </div>
+    </footer>
+
+    <!-- 
+        ============================================
+        SCRIPTS JAVASCRIPT
+        ============================================
+    -->
+    <script>
+        /**
+         * Filtro de notícias por categoria
+         * 
+         * @param {string} category - Categoria selecionada ('all', 'hq', 'manga', 'geek')
+         * 
+         * Esta função:
+         * 1. Remove a classe 'active' de todos os botões de categoria
+         * 2. Adiciona a classe 'active' ao botão clicado
+         * 3. Filtra os cards de notícias baseado na categoria selecionada
+         * 4. Exibe apenas os cards que correspondem à categoria (ou todos se 'all')
+         */
+        function filterNews(category) {
+            // Seleciona todos os cards de notícias e botões de categoria
+            const cards = document.querySelectorAll('.news-card');
+            const buttons = document.querySelectorAll('.category-btn');
+            
+            // Remove a classe 'active' de todos os botões
+            buttons.forEach(btn => btn.classList.remove('active'));
+            
+            // Adiciona a classe 'active' ao botão clicado
+            event.target.classList.add('active');
+            
+            // Filtra e exibe/oculta os cards baseado na categoria
+            cards.forEach(card => {
+                if (category === 'all' || card.dataset.category === category) {
+                    card.style.display = 'block';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+        }
+    </script>
+</body>
+</html>
+
