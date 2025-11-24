@@ -1,0 +1,114 @@
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f2eaea; /* Fundo escuro */
+    color: #0c0b0b; /* Texto claro */
+  
+}
+
+/* ESTILO DO CABEÇALHO (Ajustado para Flutuação) */
+.cabecalho {
+    background-color: #0e0e0e;
+    padding: 15px 30px;
+    border-bottom: 3px solid #cc0000; /* Borda vermelha de destaque */
+    overflow: hidden; /* Garante que os floats internos (logo e nav) sejam contidos */
+}
+
+.logo {
+    font-size: 28px;
+    font-weight: bold;
+    color: #ff3333; 
+    float: left; 
+}
+
+.cabecalho nav {
+    float: right;
+
+}
+
+.cabecalho nav a {
+    color: #e0e0e0;
+    text-decoration: none;
+    margin-left: 25px;
+    font-weight: bold;
+}
+
+
+    
+
+/* ESTILO DA NOTÍCIA PRINCIPAL */
+.noticia-principal {
+    float: left; 
+    width: 75%; 
+    padding-right: 40px;
+    padding-left: 20px; 
+    margin-top: 50px;
+    box-sizing: border-box; 
+    }
+
+    .imagem-destaque {
+        width: 30%;
+        background-color: #333333; 
+        height: 400px;
+        margin-bottom: 20px;
+    }
+
+    .noticia-principal h2 {
+        font-size: 36px;
+        color: #ff3333;
+    }
+
+    .subtitulo {
+        font-size: 20px;
+        
+    }
+
+    .leia-mais {
+        display: inline-block;
+        background-color: #cc0000;
+        color: white;
+        padding: 10px ;
+        margin-top: 20px;
+        font-weight: bold;
+    }
+
+/* ESTILO DA BARRA LATERAL */
+.barra-lateral {
+    float: right;
+    width: 25%;
+    background-color: #0e0e0e;
+    padding: 20px;
+    border-radius: 4px;
+    margin-top: 30px; 
+    box-sizing: border-box; 
+}
+
+.barra-lateral h3 {
+    margin-top: 0;
+    color: #ff3333;
+}
+
+.lista-lateral p {
+    font-size: 15px;
+    color: #ccc;
+    
+}
+
+a {
+  text-decoration: none;
+}
+
+a:hover {
+  color: red; /* Muda a cor do texto */
+  text-decoration: underline; /* Adiciona um sublinhado */
+}
+
+/* ESTILO PARA OS ÍCONES DA GUITARRA */
+.icone-logo {
+    height: 35px;
+    margin-right: 10px;
+}
+
+
+
